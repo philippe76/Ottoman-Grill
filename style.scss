@@ -1,0 +1,25 @@
+$main-bg-color: #040404;
+$main-txt-color: #e5cfbd;
+$main-button-bg: #dca26b; 
+
+body {
+    margin: 0;
+    background-color: $main-bg-color;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+        color: $main-txt-color;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+}

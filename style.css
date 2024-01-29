@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  background-color: #040404;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header a {
+  color: #e5cfbd;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}/*# sourceMappingURL=style.css.map */
