@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');
+
+$main-bg-color: #040404;
+$main-txt-color: #e5cfbd;
+$main-button-bg: #dca26b; 
+$main-button-txt: #080d16; 
+
+body {
+    margin: 0;
+    background-color: $main-bg-color;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+
+    a {
+        color: $main-txt-color;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    a.bookTable {
+        background-color: $main-button-bg;
+        color: $main-button-txt;
+        padding: 0.8em 1.3em;
+        border-radius: 50rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        transition: 0.3s ease-in;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }  
+
+
+
+}
