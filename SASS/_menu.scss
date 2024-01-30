@@ -40,7 +40,7 @@
             color: #000;
 
             span {
-                color: $main-txt-color;
+                color: $main-color;
                 font-family: 'Playfair Display', serif;
                 font-size: 1.3em;
                 color: #e3c26b;
@@ -71,4 +71,38 @@
     }
 
 
+}
+.entries {
+
+    column-count: 2;
+    column-gap: 5rem;
+
+    h3 {
+        font-size: 1.3rem;
+        font-weight: unset;
+        letter-spacing: 1px;
+        color: $secondary-color;
+    }
+
+    p {
+        position: relative;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        color: $main-color;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            width: 55%;
+            margin-left: 1.2rem;
+            border-top: 1px solid $main-color;
+        }
+    }
+
+    span {
+        color: $secondary-color;
+        float: right;
+        margin-top: -3rem;
+    }
 }

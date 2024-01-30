@@ -10,19 +10,19 @@ header {
     background-color: $main-bg-color;
 
     a {
-        color: $main-txt-color;
+        color: $main-color;
         font-size: 1.4rem;
         text-transform: uppercase;
     }
 
     a.menuLink {
-        font-family: 'Playfair Display';
+        font-family: 'Playfair Display', serif;
         font-size: 2.8rem;
         text-transform: unset;
     }
 
     a.bookTable {
-        background-color: $main-button-bg;
+        background-color: $secondary-color;
         color: $main-button-txt;
         padding: 0.8em 1.3em;
         border-radius: 50rem;

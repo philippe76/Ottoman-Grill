@@ -15,8 +15,19 @@ img {
   height: auto;
 }
 
-h1, h2 {
+h2 {
+  font-size: 2.8rem;
+  font-family: "Playfair Display", serif;
   color: #e5cfbd;
+  font-weight: unset;
+  letter-spacing: 1px;
+  transform: scaleY(1.3);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+main {
+  padding: 0 2rem;
 }
 
 header {
@@ -35,7 +46,7 @@ header a {
   text-transform: uppercase;
 }
 header a.menuLink {
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", serif;
   font-size: 2.8rem;
   text-transform: unset;
 }
@@ -108,4 +119,36 @@ header a.bookTable:hover {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+}
+
+.entries {
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+}
+.entries h3 {
+  font-size: 1.3rem;
+  font-weight: unset;
+  letter-spacing: 1px;
+  color: #dca26b;
+}
+.entries p {
+  position: relative;
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: #e5cfbd;
+}
+.entries p::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  width: 55%;
+  margin-left: 1.2rem;
+  border-top: 1px solid #e5cfbd;
+}
+.entries span {
+  color: #dca26b;
+  float: right;
+  margin-top: -3rem;
 }/*# sourceMappingURL=main.css.map */

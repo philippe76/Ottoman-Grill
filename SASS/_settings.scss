@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:wght@300;500&family=Playfair+Display:ital,wght@1@0;1,700&display=swap');
  
 $main-bg-color: #040404;
-$main-txt-color: #e5cfbd;
-$main-button-bg: #dca26b; 
+$main-color: #e5cfbd;
+$secondary-color: #dca26b; 
 $main-button-txt: #080d16; 
 
 body {
@@ -22,8 +22,19 @@ img {
     height: auto;
 }
 
-h1, h2 {
-    color: $main-txt-color;
+h2 {
+    font-size: 2.8rem;
+    font-family: 'Playfair Display', serif;
+    color: $main-color;
+    font-weight: unset;
+    letter-spacing: 1px;
+    transform: scaleY(1.3);
+    text-transform: uppercase;
+    text-align: center;
 }
 
-
+main {
+    // max-width: 1100px;
+    // margin: 0 auto;
+    padding: 0 2rem;
+}
