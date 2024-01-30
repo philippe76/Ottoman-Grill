@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:wght@300;500&family=Playfair+Display:ital,wght@1,700&display=swap");
 body {
   margin: 0;
   background-color: #040404;
   font-family: "Open Sans", sans-serif;
-  height: 300vh;
+  height: 600vh;
 }
 
 a {
@@ -22,10 +22,11 @@ h1, h2 {
 header {
   position: sticky;
   top: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 1rem;
+  margin: 1rem 0;
   background-color: #040404;
 }
 header a {
@@ -47,9 +48,42 @@ header a.bookTable:hover {
 }
 
 .hero {
-  padding: 3rem 0 5rem;
   text-align: center;
   background-color: #f7f8fb;
+}
+.hero svg {
+  fill: #fff;
+}
+.hero .hero-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  font-family: "Archivo", Sans-serif;
+}
+.hero .hero-title p {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #f7f8fb;
+  font-size: 6.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 0px 0px 1px #585367;
+}
+.hero .hero-title h1 {
+  position: relative;
+  font-size: 2.8rem;
+  color: #000;
+}
+.hero .hero-title h1 span {
+  color: #e5cfbd;
+  font-family: "Playfair Display", serif;
+  font-size: 1.3em;
+  color: #e3c26b;
 }
 .hero img {
   max-width: 990px;
