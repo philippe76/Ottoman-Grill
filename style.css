@@ -3,17 +3,30 @@ body {
   margin: 0;
   background-color: #040404;
   font-family: "Open Sans", sans-serif;
+  height: 300vh;
 }
 
 a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2 {
+  color: #e5cfbd;
+}
+
 header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 1rem;
+  background-color: #040404;
 }
 header a {
   color: #e5cfbd;
@@ -31,4 +44,13 @@ header a.bookTable {
 }
 header a.bookTable:hover {
   transform: scale(1.05);
+}
+
+.hero {
+  padding: 3rem 0 5rem;
+  text-align: center;
+  background-color: #f7f8fb;
+}
+.hero img {
+  max-width: 990px;
 }/*# sourceMappingURL=style.css.map */
