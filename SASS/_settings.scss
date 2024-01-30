@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:wght@300;500&family=Playfair+Display:ital,wght@1@0;1,700&display=swap');
+ 
+$main-bg-color: #040404;
+$main-txt-color: #e5cfbd;
+$main-button-bg: #dca26b; 
+$main-button-txt: #080d16; 
+
+body {
+    margin: 0;
+    background-color: $main-bg-color;
+    font-family: 'Open Sans', sans-serif;
+    height: 600vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2 {
+    color: $main-txt-color;
+}
+
+
