@@ -94,4 +94,18 @@ header a.bookTable:hover {
 }
 .hero img {
   max-width: 990px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.menuPics {
+  max-width: 1300px;
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+}
+.menuPics img {
+  max-width: 33.3333333333%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}/*# sourceMappingURL=main.css.map */
