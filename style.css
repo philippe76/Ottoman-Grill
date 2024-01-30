@@ -48,6 +48,7 @@ header a.bookTable:hover {
 }
 
 .hero {
+  margin-top: -3rem;
   text-align: center;
   background-color: #f7f8fb;
 }
@@ -59,6 +60,7 @@ header a.bookTable:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -2rem;
   margin-bottom: 3rem;
   font-family: "Archivo", Sans-serif;
 }
