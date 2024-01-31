@@ -9,6 +9,7 @@ $main-button-txt: #080d16;
 body {
     margin: 0;
     background-color: $main-bg-color;
+    color: $main-color;
     font-family: 'Open Sans', sans-serif;
     height: 600vh;
 }
@@ -17,12 +18,16 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+}
+
 img {
     max-width: 100%;
     height: auto;
 }
 
-h2 {
+.main-title {
     font-size: 2.8rem;
     font-family: 'Playfair Display', serif;
     color: $main-color;
@@ -33,8 +38,26 @@ h2 {
     text-align: center;
 }
 
+h2 {
+    @extend .main-title
+}
+
+.book-table {
+    background-color: $secondary-color;
+    color: $main-button-txt;
+    padding: 0.8em 1.3em;
+    border-radius: 50rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.3s ease-in;
+    text-transform: uppercase;
+    
+    &:hover {
+        transform: scale(1.05);  /* DO NOT WORK ON SCHEDULES SECTION */
+    }
+}
+
+
 main {
-    // max-width: 1100px;
-    // margin: 0 auto;
     padding: 0 2rem;
 }

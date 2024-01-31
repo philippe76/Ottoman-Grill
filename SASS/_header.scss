@@ -15,25 +15,12 @@ header {
         text-transform: uppercase;
     }
 
-    a.menu-link {
+    .menu-link {
         font-family: 'Playfair Display', serif;
         font-size: 2.8rem;
         text-transform: unset;
     }
-
-    a.book-table {
-        background-color: $secondary-color;
-        color: $main-button-txt;
-        padding: 0.8em 1.3em;
-        border-radius: 50rem;
-        font-size: 1.2rem;
-        font-weight: 500;
-        transition: 0.3s ease-in;
-
-        &:hover {
-            transform: scale(1.05);
-        }
-    }  
+     
 }
   
 
