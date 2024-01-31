@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:wght@300;500&family=Playfair+Display:ital,wght@1@0;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:wght@300;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap");
 body {
   margin: 0;
   background-color: #040404;
@@ -45,12 +45,12 @@ header a {
   font-size: 1.4rem;
   text-transform: uppercase;
 }
-header a.menuLink {
+header a.menu-link {
   font-family: "Playfair Display", serif;
   font-size: 2.8rem;
   text-transform: unset;
 }
-header a.bookTable {
+header a.book-table {
   background-color: #dca26b;
   color: #080d16;
   padding: 0.8em 1.3em;
@@ -59,19 +59,45 @@ header a.bookTable {
   font-weight: 500;
   transition: 0.3s ease-in;
 }
-header a.bookTable:hover {
+header a.book-table:hover {
   transform: scale(1.05);
 }
 
-.hero {
+.home-hero {
+  background: linear-gradient(to bottom right, rgba(16, 16, 16, 0.9), rgba(16, 16, 16, 0.9)), url(../img/meat-kabobs.jpeg) center;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 3rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e5cfbd;
+}
+.home-hero h1 {
+  font-size: 1.2rem;
+  font-weight: unset;
+  letter-spacing: 1px;
+}
+.home-hero p {
+  margin-top: 2rem;
+  font-size: 7rem;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.menu-hero {
   margin-top: -3rem;
   text-align: center;
   background-color: #f7f8fb;
 }
-.hero svg {
+.menu-hero svg {
   fill: #fff;
 }
-.hero .hero-title {
+.menu-hero .hero-title {
   position: relative;
   display: flex;
   justify-content: center;
@@ -80,7 +106,7 @@ header a.bookTable:hover {
   margin-bottom: 3rem;
   font-family: "Archivo", Sans-serif;
 }
-.hero .hero-title p {
+.menu-hero .hero-title p {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -92,28 +118,28 @@ header a.bookTable:hover {
   letter-spacing: -0.5px;
   text-shadow: 0px 0px 1px #585367;
 }
-.hero .hero-title h1 {
+.menu-hero .hero-title h1 {
   position: relative;
   font-size: 2.8rem;
   color: #000;
 }
-.hero .hero-title h1 span {
+.menu-hero .hero-title h1 span {
   color: #e5cfbd;
   font-family: "Playfair Display", serif;
   font-size: 1.3em;
   color: #e3c26b;
 }
-.hero img {
+.menu-hero img {
   max-width: 990px;
 }
 
-.menuPics {
+.menu-pics {
   max-width: 1300px;
   height: 400px;
   margin: 0 auto;
   display: flex;
 }
-.menuPics img {
+.menu-pics img {
   max-width: 33.3333333333%;
   -o-object-fit: cover;
      object-fit: cover;

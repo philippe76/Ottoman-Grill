@@ -1,0 +1,33 @@
+
+
+.home-hero {
+
+    background: linear-gradient(to bottom right, rgba(16, 16, 16, 0.9), rgba(16, 16, 16, 0.9)),
+    url(../img/meat-kabobs.jpeg) center;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 3rem 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $main-color;
+
+    h1 {
+        font-size: 1.2rem;
+        font-weight: unset;
+        letter-spacing: 1px;
+    }
+
+    p {
+        margin-top: 2rem;
+        font-size: 7rem;
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    
+}
