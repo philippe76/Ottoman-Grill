@@ -4,7 +4,7 @@ body {
   background-color: #040404;
   color: #e5cfbd;
   font-family: "Open Sans", sans-serif;
-  height: 600vh;
+  line-height: 1.8;
 }
 
 a {
@@ -42,7 +42,7 @@ img {
   text-transform: uppercase;
 }
 .book-table:hover {
-  transform: scale(1.05); /* DO NOT WORK ON SCHEDULES SECTION */
+  transform: scale(1.05);
 }
 
 main {
@@ -101,7 +101,7 @@ header .menu-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 6rem 10rem;
   background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgb(16, 16, 16)), url(../img/turkish-roofs.jpg) center;
 }
 .schedules > * {
@@ -117,6 +117,13 @@ header .menu-link {
 .schedules p:first-of-type {
   color: #dca26b;
 }
+.schedules p span {
+  line-height: 1.2;
+}
+.schedules table tr {
+  border-bottom: 1px solid #e5cfbd;
+}
+
 .menu-hero {
   margin-top: -3rem;
   text-align: center;

@@ -52,7 +52,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6rem;
+    padding: 6rem 10rem;
     background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgba(16, 16, 16, 1)),
     url(../img/turkish-roofs.jpg) center;
 
@@ -73,7 +73,14 @@
     }
 
     p span {
-        @extend .main-title
+        @extend .main-title;
+        line-height: 1.2;
+    }
+
+    table {
+        tr {
+            border-bottom: 1px solid $main-color;
+        }
     }
 }
 
