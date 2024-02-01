@@ -45,10 +45,6 @@ img {
   transform: scale(1.05);
 }
 
-main {
-  padding: 0 2rem;
-}
-
 header {
   position: sticky;
   top: 0;
@@ -99,29 +95,46 @@ header .menu-link {
 .schedules {
   height: 100vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: start;
   padding: 6rem 10rem;
-  background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgb(16, 16, 16)), url(../img/turkish-roofs.jpg) center;
+  background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgb(16, 16, 16)), url(../img/turkish-roofs.jpg) 50%;
 }
 .schedules > * {
   width: 30%;
 }
 .schedules .book-table {
   display: block;
-  width: 45%;
+  width: 50%;
   text-align: center;
   font-size: 1rem;
   margin-top: 1rem;
 }
 .schedules p:first-of-type {
   color: #dca26b;
+  margin-top: 5rem;
+}
+.schedules p + p {
+  margin-right: 3rem;
 }
 .schedules p span {
   line-height: 1.2;
 }
-.schedules table tr {
-  border-bottom: 1px solid #e5cfbd;
+.schedules table {
+  border-collapse: collapse;
+}
+.schedules table th {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  text-align: unset;
+  font-weight: unset;
+  padding-bottom: 1rem;
+}
+.schedules table td:not([rowspan] + td) {
+  border-bottom: 1px solid rgba(229, 207, 189, 0.4);
+}
+.schedules table td:last-child {
+  text-align: right;
 }
 
 .menu-hero {

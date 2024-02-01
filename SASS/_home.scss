@@ -50,11 +50,11 @@
 .schedules {
     height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    align-items: start;
     padding: 6rem 10rem;
     background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgba(16, 16, 16, 1)),
-    url(../img/turkish-roofs.jpg) center;
+    url(../img/turkish-roofs.jpg) 50%;
 
     > * {
         width: 30%;
@@ -62,7 +62,7 @@
 
     .book-table {
         display: block;
-        width: 45%;
+        width: 50%;
         text-align: center;
         font-size: 1rem;
         margin-top: 1rem;
@@ -70,6 +70,11 @@
 
     p:first-of-type {
         color: $secondary-color;
+        margin-top: 5rem;
+    }
+
+    p + p {
+        margin-right: 3rem;
     }
 
     p span {
@@ -78,8 +83,21 @@
     }
 
     table {
-        tr {
-            border-bottom: 1px solid $main-color;
+        border-collapse: collapse;
+
+        th {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            text-align: unset;
+            font-weight: unset;
+            padding-bottom: 1rem;
+        }
+
+        td:not([rowspan] + td) {
+            border-bottom: 1px solid rgba($main-color, 40%);
+        }
+        td:last-child {
+            text-align: right;
         }
     }
 }
