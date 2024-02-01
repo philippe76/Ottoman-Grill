@@ -1,4 +1,6 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:wght@300;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 body {
   margin: 0;
   background-color: #040404;
@@ -96,7 +98,7 @@ header .menu-link {
   height: 100vh;
   display: flex;
   justify-content: space-around;
-  align-items: start;
+  align-items: center;
   padding: 6rem 10rem;
   background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgb(16, 16, 16)), url(../img/turkish-roofs.jpg) 50%;
 }
@@ -112,9 +114,9 @@ header .menu-link {
 }
 .schedules p:first-of-type {
   color: #dca26b;
-  margin-top: 5rem;
 }
 .schedules p + p {
+  margin-top: 3.5rem;
   margin-right: 3rem;
 }
 .schedules p span {
@@ -135,6 +137,27 @@ header .menu-link {
 }
 .schedules table td:last-child {
   text-align: right;
+}
+
+.testimonials {
+  width: 50%;
+  margin: 5rem auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.testimonials blockquote::before {
+  content: url(../img/quotes-right.svg);
+  display: block;
+  transform: scale(1.8);
+  margin-bottom: 1rem;
+  overflow: visible;
+}
+.testimonials blockquote::after {
+  content: "\f005  \f005  \f005  \f005  \f005  ";
+  font: var(--fa-font-solid);
+  display: block;
+  margin-top: 2rem;
+  color: #dca26b;
 }
 
 .menu-hero {

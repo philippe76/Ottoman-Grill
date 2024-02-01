@@ -51,7 +51,7 @@
     height: 100vh;
     display: flex;
     justify-content: space-around;
-    align-items: start;
+    align-items: center;
     padding: 6rem 10rem;
     background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgba(16, 16, 16, 1)),
     url(../img/turkish-roofs.jpg) 50%;
@@ -70,10 +70,10 @@
 
     p:first-of-type {
         color: $secondary-color;
-        margin-top: 5rem;
     }
 
     p + p {
+        margin-top: 3.5rem;
         margin-right: 3rem;
     }
 
@@ -102,3 +102,35 @@
     }
 }
 
+.testimonials {
+
+    width: 50%;
+    margin: 5rem auto;
+    text-align: center;
+    font-size: 1.1rem;
+
+    blockquote::before {        
+        content: url(../img/quotes-right.svg);
+        display: block;
+        transform: scale(1.8);
+        margin-bottom: 1rem;
+        overflow: visible
+    }
+    
+    blockquote::after {
+        // content: '\f005 \00a0 \00a0 \f005 \00a0 \00a0 \f005 \00a0 \00a0 \f005 \00a0 \00a0 \f005';
+        @mixin repeat($character, $n){
+            $c:"";
+            @for $i from 1 through $n {
+              $c: $c + $character;
+            }
+            content: $c;
+        }
+        @include repeat('\f005 \00a0 \00a0', 5);
+        
+        font: var(--fa-font-solid);
+        display: block;
+        margin-top: 2rem;
+        color: $secondary-color;
+    }
+}
