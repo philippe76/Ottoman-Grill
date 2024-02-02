@@ -138,6 +138,9 @@ header .menu-link {
 .schedules table td:last-child {
   text-align: right;
 }
+.schedules table tr:last-child td {
+  padding-top: 1rem;
+}
 
 .testimonials {
   width: 50%;
@@ -155,9 +158,18 @@ header .menu-link {
 .testimonials blockquote::after {
   content: "\f005  \f005  \f005  \f005  \f005  ";
   font: var(--fa-font-solid);
+  font-size: 0.8rem;
   display: block;
-  margin-top: 2rem;
+  margin: 3.5rem 0 2rem;
   color: #dca26b;
+}
+.testimonials p {
+  color: #dca26b;
+  margin-bottom: 0;
+}
+.testimonials cite {
+  color: #757575;
+  font-style: unset;
 }
 
 .menu-hero {

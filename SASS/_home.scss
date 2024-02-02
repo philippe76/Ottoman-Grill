@@ -87,6 +87,9 @@
         td:last-child {
             text-align: right;
         }
+        tr:last-child td {
+            padding-top: 1rem;
+        }
     }
 }
 
@@ -110,15 +113,25 @@
         @mixin repeat($character, $n){
             $c:"";
             @for $i from 1 through $n {
-              $c: $c + $character;
+                $c: $c + $character;
             }
             content: $c;
         }
         @include repeat('\f005 \00a0 \00a0', 5);
         
         font: var(--fa-font-solid);
+        font-size: 0.8rem;
         display: block;
-        margin-top: 2rem;
+        margin: 3.5rem 0 2rem;
         color: $secondary-color;
+    }
+
+    p {
+        color: $secondary-color;
+        margin-bottom: 0;
+    }
+    cite {
+        color: #757575;
+        font-style: unset;
     }
 }
