@@ -8,6 +8,10 @@ $main-color: #e5cfbd;
 $secondary-color: #dca26b; 
 $main-button-txt: #080d16; 
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background-color: $main-bg-color;
