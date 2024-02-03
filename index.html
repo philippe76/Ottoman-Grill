@@ -75,8 +75,7 @@
                 <source src="img/grill.mp4" type="video/mp4">
               Your browser does not support the video tag.
               </video>
-              <div class="overlay">
-                
+              <div class="overlay">       
                 <div>
                     <h2>VENTE À EMPORTER</h2>
                     <p>De quoi se régaler à domicile </p>
@@ -86,5 +85,16 @@
         </section>
     </main>
 
+    <script>
+        window.onscroll = function() {
+            if (window.scrollY > 0){  
+                console.log('SCFROLL');
+                document.querySelector('header').classList.add("header-border");
+            }
+            else{
+                document.querySelector('header').classList.remove("header-border");
+            }
+        }
+    </script>
 </body>
 </html>
