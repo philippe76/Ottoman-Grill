@@ -209,4 +209,18 @@
         }
 
     }
+
+    .pic-gallery {
+        
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        img {
+            height: 15rem;
+            // object-fit: cover;
+            // flex-grow: 3;
+            // flex-basis: auto;
+        }
+    }
 }
