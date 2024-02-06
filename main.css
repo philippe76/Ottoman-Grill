@@ -214,6 +214,37 @@ header .menu-link {
   font-size: 1.2rem;
 }
 
+.intro-menu article {
+  width: 75%;
+  margin: 12rem auto;
+}
+.intro-menu article img {
+  float: left;
+  max-width: 50%;
+  margin-right: 6rem;
+  margin-bottom: 3rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: opacity(0.6);
+}
+.intro-menu article img + p {
+  color: #dca26b;
+  letter-spacing: 5px;
+}
+.intro-menu article h2 {
+  text-transform: unset;
+  transform: none;
+  text-align: left;
+  line-height: 1.1;
+  margin: 1rem 0;
+}
+.intro-menu article .book-table {
+  clear: both;
+  display: block;
+  width: 12rem;
+  margin: 0 auto;
+}
+
 .menu-hero {
   margin-top: -3rem;
   text-align: center;
