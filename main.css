@@ -27,7 +27,7 @@ img {
   height: auto;
 }
 
-.main-title, .schedules p span, h2 {
+.main-title, .intro-menu .pic-gallery figure figcaption, .schedules p span, h2 {
   font-size: 2.8rem;
   font-family: "Playfair Display", serif;
   color: #e5cfbd;
@@ -215,11 +215,11 @@ header .menu-link {
   font-size: 1.2rem;
 }
 
-.intro-menu article {
+.intro-menu article:first-of-type {
   width: 75%;
   margin: 12rem auto 8rem;
 }
-.intro-menu article img {
+.intro-menu article:first-of-type img {
   float: left;
   max-width: 50%;
   margin-right: 6rem;
@@ -228,18 +228,18 @@ header .menu-link {
      object-fit: contain;
   filter: opacity(0.6);
 }
-.intro-menu article img + p {
+.intro-menu article:first-of-type img + p {
   color: #dca26b;
   letter-spacing: 5px;
 }
-.intro-menu article h2 {
+.intro-menu article:first-of-type h2 {
   text-transform: unset;
   transform: none;
   text-align: left;
   line-height: 1.1;
   margin: 1rem 0;
 }
-.intro-menu article .book-table {
+.intro-menu article:first-of-type .book-table {
   clear: both;
   display: block;
   width: 12rem;
@@ -249,11 +249,36 @@ header .menu-link {
   display: flex;
   margin-bottom: 3rem;
 }
-.intro-menu .pic-gallery img {
-  height: 17rem;
+.intro-menu .pic-gallery figure {
+  position: relative;
+  margin: 0;
   width: 25vw;
+}
+.intro-menu .pic-gallery figure img {
+  height: 17rem;
   -o-object-fit: cover;
      object-fit: cover;
+  min-width: 100%;
+  cursor: pointer;
+}
+.intro-menu .pic-gallery figure img:hover + figcaption, .intro-menu .pic-gallery figure figcaption:hover {
+  opacity: 1;
+  height: 100%;
+}
+.intro-menu .pic-gallery figure figcaption {
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: none;
+  color: #dca26b;
+  background-color: rgba(4, 4, 4, 0.9);
+  cursor: pointer;
+  transition: 0.8s ease-in-out;
 }
 
 .menu-hero {
