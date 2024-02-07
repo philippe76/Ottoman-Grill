@@ -6,7 +6,7 @@
     min-height: 100vh;
 
     background: linear-gradient(to bottom right, rgba(11, 11, 11, 0.8), rgba(13, 13, 13, 0.8)),
-    url(../img/meat-kabobs.jpeg) center;
+    url(img/meat-kabobs.jpeg) center;
     color: $main-color;
 
     margin: 0 auto;
@@ -41,7 +41,7 @@
     align-items: center;
     padding: 6rem 10rem;
     background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgba(4, 4, 4, 1)),
-    url(../img/turkish-roofs.jpg) 50%;
+    url(img/turkish-roofs.jpg) 50%;
 
     > * {
         width: 30%;
@@ -100,7 +100,7 @@
     font-size: 1.1rem;
 
     blockquote::before {        
-        content: url(../img/quotes-right.svg);
+        content: url(img/quotes-right.svg);
         display: block;
         transform: scale(1.8);
         margin-bottom: 1rem;
@@ -254,7 +254,7 @@
 
 .book-hero {
     background: linear-gradient(to bottom right, rgba(11, 11, 11, 0.8), rgba(13, 13, 13, 0.8)),
-    url("../img/restaurant-room.jpg") fixed no-repeat;
+    url(img/restaurant-room.jpg) fixed no-repeat;
     background-size: cover;
     height: 30rem;
     display: flex;
