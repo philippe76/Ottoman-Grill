@@ -217,7 +217,7 @@ header .menu-link {
 
 .intro-menu article {
   width: 75%;
-  margin: 12rem auto;
+  margin: 12rem auto 8rem;
 }
 .intro-menu article img {
   float: left;
@@ -247,11 +247,13 @@ header .menu-link {
 }
 .intro-menu .pic-gallery {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  margin-bottom: 3rem;
 }
 .intro-menu .pic-gallery img {
-  height: 15rem;
+  height: 17rem;
+  width: 25vw;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .menu-hero {
