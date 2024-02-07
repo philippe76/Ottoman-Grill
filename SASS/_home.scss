@@ -4,7 +4,6 @@
 
     max-width: 1400px;
     min-height: 100vh;
-    // overflow: hidden;
 
     background: linear-gradient(to bottom right, rgba(11, 11, 11, 0.8), rgba(13, 13, 13, 0.8)),
     url(../img/meat-kabobs.jpeg) center;
@@ -213,12 +212,12 @@
     .pic-gallery {
         
         display: flex;
-        margin-bottom: 3rem;
         
         figure {
             position: relative;
             margin: 0;
             width: 25vw;
+            height: 17rem;
 
             img {
                 height: 17rem;
@@ -246,9 +245,35 @@
                 color: $secondary-color;
                 background-color: rgba(4, 4, 4, 0.9);
                 cursor: pointer;
-                transition: 0.8s ease-in-out;
+                transition: 0.6s ease-in-out;
             }
         }
 
+    }
+}
+
+.book-hero {
+    background: linear-gradient(to bottom right, rgba(11, 11, 11, 0.8), rgba(13, 13, 13, 0.8)),
+    url(../img/restaurant-room.jpg) fixed no-repeat;
+    background-size: cover;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    article {
+        width: 57%;
+        text-align: center;
+
+        h2 {
+            text-transform: unset;
+            transform: none;
+            margin-bottom: 0;
+        }
+        p {
+            padding: 0 2rem;
+            margin-bottom: 3rem;
+        }
     }
 }
