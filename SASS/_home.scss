@@ -277,3 +277,11 @@
         }
     }
 }
+
+footer {
+    .fa::before {
+        font-family: FontAwesome;
+        content: '\f262'
+        // font-weight: var(--fa-style,900)
+    }
+}
