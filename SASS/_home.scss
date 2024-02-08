@@ -279,9 +279,50 @@
 }
 
 footer {
-    .fa::before {
-        font-family: FontAwesome;
-        content: '\f262'
-        // font-weight: var(--fa-style,900)
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6em 10em;
+    
+    img[alt^="logo"] {
+        width: 20rem;
+        object-fit: contain;
+    }
+
+    a {
+        color: $footer-color;
+    }
+
+    .internal-links {
+        column-count: 2;
+        
+        li {
+            padding: 0.8em 0.9em;
+        }
+    }
+
+    address {
+
+        > a {
+            display: block;
+            margin: 0.5rem 0; 
+        }
+
+        .network-links {
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                font-size: 1.8rem;
+            }
+            a:hover {
+                color: $secondary-color;
+            }
+            
+            svg:hover path {
+                fill: $secondary-color;
+            }
+        }
     }
 }

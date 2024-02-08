@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:wght@300;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 * {
   box-sizing: border-box;
@@ -302,6 +303,45 @@ header .menu-link {
 .book-hero article p {
   padding: 0 2rem;
   margin-bottom: 3rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6em 10em;
+}
+footer img[alt^=logo] {
+  width: 20rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer a {
+  color: #757575;
+}
+footer .internal-links {
+  -moz-column-count: 2;
+       column-count: 2;
+}
+footer .internal-links li {
+  padding: 0.8em 0.9em;
+}
+footer address > a {
+  display: block;
+  margin: 0.5rem 0;
+}
+footer address .network-links {
+  display: flex;
+  justify-content: space-between;
+}
+footer address .network-links a {
+  font-size: 1.8rem;
+}
+footer address .network-links a:hover {
+  color: #dca26b;
+}
+footer address .network-links svg:hover path {
+  fill: #dca26b;
 }
 
 .menu-hero {
