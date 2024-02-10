@@ -135,7 +135,7 @@
     }
 }
 
-.video {
+.video-hero {
     max-height: 70vh;
     overflow: hidden;
     position: relative;
@@ -328,7 +328,6 @@ footer {
             }
         }
     }
-
     
     .copyright {
         display: flex;
@@ -340,10 +339,11 @@ footer {
         color: $footer-color;
     }
 }
-    hr {
-        border: none;
-        border-top: 1px solid rgba($main-color, 0.1);
-        position: relative;
-        bottom: 5rem;
-        width: 100%;
-    }
+
+hr {
+    border: none;
+    border-top: 1px solid rgba($main-color, 0.1);
+    position: relative;
+    bottom: 5rem;
+    width: 100%;
+}

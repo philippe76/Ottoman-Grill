@@ -182,19 +182,19 @@ header .menu-link {
   font-style: unset;
 }
 
-.video {
+.video-hero {
   max-height: 70vh;
   overflow: hidden;
   position: relative;
 }
-.video video {
+.video-hero video {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center right;
      object-position: center right;
 }
-.video .overlay {
+.video-hero .overlay, .video-hero .overlay-menu {
   background: linear-gradient(to right, rgba(16, 16, 16, 0.9), rgba(16, 16, 16, 0.9));
   opacity: 0.7;
   position: absolute;
@@ -207,11 +207,11 @@ header .menu-link {
   justify-content: space-around;
   align-items: center;
 }
-.video .overlay h2 {
+.video-hero .overlay h2, .video-hero .overlay-menu h2 {
   transform: unset;
   margin-bottom: 0;
 }
-.video .overlay p {
+.video-hero .overlay p, .video-hero .overlay-menu p {
   margin-top: 0;
   font-size: 1.2rem;
 }
@@ -362,6 +362,29 @@ hr {
   position: relative;
   bottom: 5rem;
   width: 100%;
+}
+
+.video-hero {
+  min-height: 100vh;
+}
+.video-hero .overlay-menu {
+  background: linear-gradient(to top, rgba(16, 16, 16, 0.7), rgb(4, 4, 4));
+  flex-direction: column;
+  opacity: 1;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 22.5rem;
+}
+.video-hero .overlay-menu h2 {
+  text-transform: unset;
+}
+.video-hero .overlay-menu p {
+  font-size: 1rem;
+  margin: 0.5rem 0 2rem;
+}
+.video-hero .overlay-menu .book-table {
+  font-size: 1rem;
+  padding: 0.8em 1.5em;
 }
 
 .menu-hero {
