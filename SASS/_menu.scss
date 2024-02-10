@@ -1,7 +1,8 @@
 
 
-.video-hero {
+.menu-video-hero {
 
+    @extend.video-hero;
     min-height: 100vh;
 
     .overlay-menu {
