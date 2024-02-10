@@ -310,7 +310,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 6em 10em 2em;
+  padding: 6em 10em 0;
   padding-left: 8em;
 }
 footer img[alt^=logo] {
@@ -346,19 +346,22 @@ footer address .network-links a:hover {
 footer address .network-links svg:hover path {
   fill: #dca26b;
 }
-footer hr {
-  margin: 2rem 0 1rem;
-  border: none;
-  border-top: 1px solid rgba(229, 207, 189, 0.1);
-  width: 200%;
-}
 footer .copyright {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 0 2rem;
+  margin-top: 5em;
   font-size: 0.9rem;
   color: #757575;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(229, 207, 189, 0.1);
+  position: relative;
+  bottom: 5rem;
+  width: 100%;
 }
 
 .menu-hero {
