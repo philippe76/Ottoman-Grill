@@ -148,9 +148,11 @@
         </ul>
         
         <address>
+
             <a href="https://www.google.com/maps/place/Ottoman+Grill/@48.9656697,2.2808211,17z/data=!3m1!4b1!4m6!3m5!1s0x47e6662687190001:0xbff2581bafdbf37b!8m2!3d48.9656697!4d2.2808211!16s%2Fg%2F11f_21416b?entry=ttu" target="_blank" rel="noopener noreferrer">27 Bd Pasteur, 95210 Saint-Gratien</a>
             <a href="tel:+33139897094">01 39 89 70 94</a>
             <a href="mailto:ottomangrill@outlook.fr">ottomangrill@outlook.fr</a>
+
             <ul class="network-links">
                 <li>
                     <a href="https://www.facebook.com/ottomangrill.fr/" target="_blank" rel="noopener noreferrer">
@@ -175,9 +177,15 @@
                 </li>
             </ul>
         </address>
+        <hr>
+        <div class="copyright">
+            <p>Copyright ©<span class="footerDate"></span> OTTOMAN GRILL</p>
+            <p>CopyCat by Filip ©<span class="footerDate"></span> </p>
+        </div>
     </footer>
 
     <script>
+        
         window.onscroll = function() {
             if (window.scrollY > 0){  
                 document.querySelector('header').classList.add("header-border");
@@ -186,6 +194,9 @@
                 document.querySelector('header').classList.remove("header-border");
             }
         }
+        
+        document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear())
+
     </script>
 </body>
 </html>

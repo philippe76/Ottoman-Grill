@@ -281,9 +281,11 @@
 footer {
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 6em 10em;
+    padding: 6em 10em 2em;
+    padding-left: 8em;
     
     img[alt^="logo"] {
         width: 20rem;
@@ -307,6 +309,7 @@ footer {
         > a {
             display: block;
             margin: 0.5rem 0; 
+            font-style: initial;
         }
 
         .network-links {
@@ -324,5 +327,21 @@ footer {
                 fill: $secondary-color;
             }
         }
+    }
+
+    hr {
+        margin: 2rem 0 1rem; 
+        border: none;
+        border-top: 1px solid rgba($main-color, 0.1);
+        width: 200%;
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 2rem;
+        font-size: 0.9rem;
+        color: $footer-color;
     }
 }
