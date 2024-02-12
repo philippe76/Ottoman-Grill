@@ -52,6 +52,14 @@ img {
   transform: scale(1.05);
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(300px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 header {
   position: sticky;
   top: 0;
@@ -74,7 +82,7 @@ header .menu-link {
 }
 
 .header-border {
-  border-bottom: 1px solid rgba(229, 207, 189, 0.1);
+  border-bottom: 1px solid rgba(229, 207, 189, 0.3);
 }
 
 .home-hero {
@@ -127,14 +135,6 @@ header .menu-link {
   text-align: center;
   line-height: 1.2;
   animation: slideUp 0.7s cubic-bezier(0, 0, 0.16, 0.97);
-}
-@keyframes slideUp {
-  from {
-    transform: translateY(300px);
-  }
-  to {
-    transform: translateY(0);
-  }
 }
 
 .schedules {
@@ -408,16 +408,21 @@ hr {
   text-align: center;
   padding: 5rem 22.5rem;
 }
+.menu-video-hero .overlay-menu h2, .menu-video-hero .overlay-menu p, .menu-video-hero .overlay-menu .book-table {
+  animation: slideUp 0.7s cubic-bezier(0, 0, 0.16, 0.97);
+}
 .menu-video-hero .overlay-menu h2 {
   text-transform: unset;
 }
 .menu-video-hero .overlay-menu p {
   font-size: 1rem;
   margin: 0.5rem 0 2rem;
+  animation-duration: 1s;
 }
 .menu-video-hero .overlay-menu .book-table {
   font-size: 1rem;
   padding: 0.8em 1.5em;
+  animation-duration: 1.5s;
 }
 
 .menu-hero {

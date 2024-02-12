@@ -14,6 +14,10 @@
         justify-content: center;
         text-align: center;
         padding: 5rem 22.5rem;
+
+        h2, p, .book-table {
+            animation: slideUp 0.7s cubic-bezier(0, 0, 0.16, 0.97);
+        }
         
         h2 {
             text-transform: unset;
@@ -21,10 +25,12 @@
         p {
             font-size: 1rem;
             margin: 0.5rem 0 2rem;
+            animation-duration: 1s;
         }
         .book-table {
             font-size: 1rem;
             padding: 0.8em 1.5em;
+            animation-duration: 1.5s;
         }
     }
 }

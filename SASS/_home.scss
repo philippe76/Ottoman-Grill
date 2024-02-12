@@ -57,14 +57,6 @@
         line-height: 1.2;
         animation: slideUp 0.7s cubic-bezier(0, 0, 0.16, 0.97);
     }
-
-    @keyframes slideUp {
-        from {
-            transform: translateY(300px);
-        }
-        to {transform: translateY(0);
-        }
-    }
     
 }
 
