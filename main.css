@@ -553,4 +553,11 @@ hr {
   color: #dca26b;
   float: right;
   margin-top: -3rem;
+}
+
+.desserts {
+  height: 100vh;
+  background: linear-gradient(to top, rgba(26, 17, 3, 0.75), rgba(4, 4, 4, 0.75)), url(img/turkish-tea.jpg) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }/*# sourceMappingURL=main.css.map */

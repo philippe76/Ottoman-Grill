@@ -117,17 +117,7 @@
                 <span>7.90 €</span>
             </li>
         </ul>
-       
-       
-     
-       
-        
-       
-       
-      
-       
-       
-       
+
        <!-- Assiette entrée mixte pour 1 personne
        13.90 €
        Assiette entrée mixte pour 2 personne​s
@@ -145,6 +135,13 @@
        Salade verte, olive, poulet, crouton de pain
        
        16.90 €  -->
+
+        <section class="desserts">
+
+        </section>
+
+
+
     </main>
 
     <footer>
@@ -215,16 +212,45 @@
 
     <script>
 
+        let scrollPosition = [];
+        let brightness = 55;
+
+
         window.onscroll = function() {
+
+            // ADD BORDER TO HEADER 
             if (window.scrollY > 0){  
                 document.querySelector('header').classList.add("header-border");
             }
-            else{
+            else {
                 document.querySelector('header').classList.remove("header-border");
             }
+
+            // INCREASE - DECREASE BRIGHTNESS OF BACKGROUND
+            if (window.scrollY > 1900)  {
+
+                scrollPosition.splice(1); // delete too old position
+                scrollPosition.unshift(Math.round(window.scrollY)); // Add new position
+
+                // if scrolling down
+                if(scrollPosition[0] > scrollPosition[1]){
+                    document.querySelector('.desserts').style.filter = `brightness(${brightness+=3.5}%)`
+                } 
+                //  if scrolling up
+                else{
+                    document.querySelector('.desserts').style.filter = `brightness(${brightness-=3.5}%)`
+                }
+            }
+            else {
+                brightness = 55;
+            }
+        
+
+
         }
 
-        document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear())
+        document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear());
+
 
     </script>
 </body>
