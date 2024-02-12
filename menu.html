@@ -44,9 +44,27 @@
             </div>
 
             <div class="menu-pics">
-                <img src="img/dahl-soup.jpeg" alt="Bol de soupe de lentilles corail">
-                <img src="img/meat-kabobs.jpeg" alt="Grille de brochettes de veau sur le feu">
-                <img src="img/baklava.jpeg" alt="assiette de baklavas avec verres de thé">
+                <figure>
+                    <img src="img/dahl-soup.jpeg" alt="Bol de soupe de lentilles corail">
+                    <figcaption>
+                        <p>Les entrées</p>
+                        <a href="#" class="book-table">Voir le menu</a>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="img/meat-kabobs.jpeg" alt="Grille de brochettes de veau sur le feu">
+                    <figcaption>
+                        <p>Les plats</p>
+                        <a href="#" class="book-table">Voir le menu</a>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="img/baklava.jpeg" alt="assiette de baklavas avec verres de thé">
+                    <figcaption>
+                        <p>Les desserts</p>
+                        <a href="#" class="book-table">Voir le menu</a>
+                    </figcaption>
+                </figure>
             </div>
 
             <svg class="wave-bg" viewBox="0 0 100 20">
@@ -196,6 +214,7 @@
     <hr>
 
     <script>
+
         window.onscroll = function() {
             if (window.scrollY > 0){  
                 document.querySelector('header').classList.add("header-border");
@@ -204,6 +223,9 @@
                 document.querySelector('header').classList.remove("header-border");
             }
         }
+
+        document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear())
+
     </script>
 </body>
 </html>
