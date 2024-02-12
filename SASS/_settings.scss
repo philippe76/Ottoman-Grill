@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:wght@300;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
 $main-bg-color: #040404;
@@ -9,6 +8,7 @@ $main-color: #e5cfbd;
 $secondary-color: #dca26b; 
 $main-button-txt: #080d16; 
 $footer-color: #757575;
+$gradient-overlay: linear-gradient(to right, rgba(23, 23, 23, 0.75),  rgba(23, 23, 23, 0.75));
 
 * {
     box-sizing: border-box;
