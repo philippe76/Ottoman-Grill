@@ -399,6 +399,7 @@ hr {
 
 .menu-video-hero {
   min-height: 100vh;
+  margin-top: -7rem;
 }
 .menu-video-hero .overlay-menu {
   background: linear-gradient(to top, rgba(16, 16, 16, 0.7), rgb(4, 4, 4));
@@ -406,7 +407,7 @@ hr {
   opacity: 1;
   justify-content: center;
   text-align: center;
-  padding: 5rem 22.5rem;
+  padding: 0 22.5em;
 }
 .menu-video-hero .overlay-menu h2, .menu-video-hero .overlay-menu p, .menu-video-hero .overlay-menu .book-table {
   animation: slideUp 0.7s cubic-bezier(0, 0, 0.16, 0.97);
@@ -486,12 +487,20 @@ hr {
   margin: 0 auto;
   display: flex;
 }
+.menu-pics:has(img:hover) img:not(:hover) {
+  width: 25%;
+}
 .menu-pics img {
-  max-width: 33.3333333333%;
+  width: 33.3333333333%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+  cursor: pointer;
+  transition: 1s ease;
+}
+.menu-pics img:hover {
+  width: 50%;
 }
 
 .entries {

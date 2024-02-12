@@ -4,6 +4,7 @@
 
     @extend.video-hero;
     min-height: 100vh;
+    margin-top: -7rem;
 
     .overlay-menu {
         
@@ -13,7 +14,7 @@
         opacity: 1;
         justify-content: center;
         text-align: center;
-        padding: 5rem 22.5rem;
+        padding: 0 22.5em;
 
         h2, p, .book-table {
             animation: slideUp 0.7s cubic-bezier(0, 0, 0.16, 0.97);
@@ -118,10 +119,21 @@
     margin: 0 auto;
     display: flex;
 
+    &:has(img:hover) img:not(:hover) {
+        width: 25%;
+    }
+
     img {
-        max-width: calc(100% / 3);
+        width: calc(100% / 3);
         object-fit: cover;
         object-position: center center;
+        cursor: pointer;
+        transition: 1s ease;
+
+        &:hover {
+            width: 50%;
+        }
+        
     }
 
 
