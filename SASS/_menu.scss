@@ -166,10 +166,14 @@
 
     padding: 0 12em;
 
+    h2 {
+        transform: none;
+    }
+
     ul {
         column-count: 2;
         column-gap: 7rem;
-        min-height: 100vh;
+        height: 100vh;
     }
     
     li:nth-child(2) {
@@ -208,21 +212,40 @@
         }
     }
 
-    dl {
-        margin-left: 0.5rem;
+    .entries-list {
+
+        dl {
+            margin-left: 0.6rem;
+        }
+        dt {
+            float: left;
+            clear: both;
+            margin-right: 1rem;
+            color: rgba($main-color, 0.8)
+        }
+        dd {
+            color: $footer-color;
+            font-style: italic;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        // make closer "Entrée mixte pour 1 personne"
+        & + .with-price p {
+            margin-top: -1.2rem;
+        }
     }
-    
-    dt {
-        float: left;
-        clear: both;
-        margin-right: 1rem;
-        color: rgba($main-color, 0.8)
-    }
-    dd {
-        color: $footer-color;
-        font-style: italic;
-        font-size: 0.9rem;
-        margin: 0;
+
+    // SALADES
+    li:last-of-type {
+
+        .details {
+            color: $footer-color;
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-top: -0.5rem;
+            margin-bottom: 2rem;
+        } 
     }
 
     

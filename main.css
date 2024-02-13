@@ -526,12 +526,15 @@ hr {
 .entries {
   padding: 0 12em;
 }
+.entries h2 {
+  transform: none;
+}
 .entries ul {
   -moz-column-count: 2;
        column-count: 2;
   -moz-column-gap: 7rem;
        column-gap: 7rem;
-  min-height: 100vh;
+  height: 100vh;
 }
 .entries li:nth-child(2) {
   -moz-column-break-inside: avoid;
@@ -566,20 +569,30 @@ hr {
   color: #dca26b;
   font-family: unset;
 }
-.entries dl {
-  margin-left: 0.5rem;
+.entries .entries-list dl {
+  margin-left: 0.6rem;
 }
-.entries dt {
+.entries .entries-list dt {
   float: left;
   clear: both;
   margin-right: 1rem;
   color: rgba(229, 207, 189, 0.8);
 }
-.entries dd {
+.entries .entries-list dd {
   color: #757575;
   font-style: italic;
   font-size: 0.9rem;
   margin: 0;
+}
+.entries .entries-list + .with-price p {
+  margin-top: -1.2rem;
+}
+.entries li:last-of-type .details {
+  color: #757575;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
 }
 
 .desserts {
