@@ -485,6 +485,7 @@ hr {
 }
 
 .menu-pics {
+  clear: both;
   max-width: 1300px;
   height: 400px;
   margin: 0 auto;
@@ -523,22 +524,15 @@ hr {
   align-items: center;
 }
 
+.entries + .menu-pics {
+  margin-top: 40rem;
+}
+
 .entries {
   padding: 0 12em;
 }
 .entries h2 {
   transform: none;
-}
-.entries ul {
-  -moz-column-count: 2;
-       column-count: 2;
-  -moz-column-gap: 7rem;
-       column-gap: 7rem;
-  height: 100vh;
-}
-.entries li:nth-child(2) {
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
 }
 .entries h3 {
   font-weight: unset;
@@ -570,13 +564,14 @@ hr {
   font-family: unset;
 }
 .entries .entries-list dl {
+  margin: 0.3rem;
   margin-left: 0.6rem;
 }
 .entries .entries-list dt {
   float: left;
   clear: both;
   margin-right: 1rem;
-  color: rgba(229, 207, 189, 0.8);
+  color: rgba(229, 207, 189, 0.7);
 }
 .entries .entries-list dd {
   color: #757575;
@@ -586,6 +581,17 @@ hr {
 }
 .entries .entries-list + .with-price p {
   margin-top: -1.2rem;
+}
+.entries li:not(:last-of-type) {
+  float: left;
+  clear: both;
+  width: 50%;
+}
+.entries li:last-of-type {
+  float: right;
+  width: calc(50% - 7rem);
+  margin-left: 7rem;
+  margin-top: -7rem;
 }
 .entries li:last-of-type .details {
   color: #757575;

@@ -111,16 +111,18 @@
 }
 
 // ************************************* //
-// ************* MENU PICS ************ //
+// ******** MENU PICS [3 IMAGES] ******* //
 // ************************************* //
 
 .menu-pics {
+    clear: both;
     max-width: 1300px;
     height: 400px;
     margin: 0 auto;
     display: flex;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.486);
 
+    // ZOOM ON HOVERED PIC
     &:has(figure:hover) figure:not(:hover) {
         width: 25%;
     }
@@ -132,6 +134,7 @@
         object-position: center center;
     }
 
+    // TITLE APPEARS ON HOVER
     img:hover + figcaption, figcaption:hover {
         opacity: 1;
         height: 100%;
@@ -162,22 +165,21 @@
 
 }
 
+// PICS AFTER ENTRIES MENU
+.entries + .menu-pics {
+    margin-top: 40rem;  // Because of floating entries...
+}
+
+// ************************************* //
+// ************** ENTRIES ************* //
+// ************************************* //
+
 .entries {
 
     padding: 0 12em;
 
     h2 {
         transform: none;
-    }
-
-    ul {
-        column-count: 2;
-        column-gap: 7rem;
-        height: 100vh;
-    }
-    
-    li:nth-child(2) {
-        break-inside: avoid;
     }
 
     h3 {
@@ -215,13 +217,14 @@
     .entries-list {
 
         dl {
+            margin: 0.3rem;
             margin-left: 0.6rem;
         }
         dt {
             float: left;
             clear: both;
             margin-right: 1rem;
-            color: rgba($main-color, 0.8)
+            color: rgba($main-color, 0.7)
         }
         dd {
             color: $footer-color;
@@ -236,8 +239,19 @@
         }
     }
 
-    // SALADES
+    // ON LEFT SIDE : Soupe et entrées 
+    li:not(:last-of-type) {
+        float: left;
+        clear: both;
+        width: 50%;
+    }
+
+    // ON RIGHT SIDE : Salades à droite 
     li:last-of-type {
+        float: right;
+        width: calc(50% - 7rem);
+        margin-left: 7rem;
+        margin-top: -7rem;
 
         .details {
             color: $footer-color;
