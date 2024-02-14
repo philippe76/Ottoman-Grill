@@ -48,7 +48,7 @@
                     <img src="img/dahl-soup.jpeg" alt="Bol de soupe de lentilles corail">
                     <figcaption>
                         <p>Les entrées</p>
-                        <a href="#" class="book-table">Voir le menu</a>
+                        <a href="#entries" class="book-table">Voir le menu</a>
                     </figcaption>
                 </figure>
                 <figure>
@@ -62,7 +62,7 @@
                     <img src="img/baklava.jpeg" alt="assiette de baklavas avec verres de thé">
                     <figcaption>
                         <p>Les desserts</p>
-                        <a href="#" class="book-table">Voir le menu</a>
+                        <a href="#desserts" class="book-table">Voir le menu</a>
                     </figcaption>
                 </figure>
             </div>
@@ -78,7 +78,7 @@
 
     <main>
 
-        <section class="entries">
+        <section id="entries">
 
             <h2>Les entrées</h2>
             <ul>
@@ -151,6 +151,8 @@
             
         </section>
 
+        <h2>Les plats</h2>
+
         <div class="menu-pics">
             <figure>
                 <img src="img/steak-wood-plate.jpeg" alt="steak sur assiette en bois avec salade, sauce poivre et purée maison">
@@ -175,7 +177,65 @@
             </figure>
         </div>
 
-        <section class="desserts"></section>
+        
+        
+        <section class="exception-meats">
+            <div class="menu-title">
+                <h2>Viandes Maturées <br>
+                    & D'Exceptions</h2>
+        
+                <p class="subtitle">2 garnitures au choix (frites / riz-blé / salade) </p>
+            </div>
+
+            <ul>
+                <li>
+                    <h3>ASHADO</h3>
+                    <p class="details">Poitrine de Bœuf rôtie au four pendant 8 heures, découpée à table</p>
+                    <div class="with-price">
+                        <p>2 Personnes</p>
+                        <p>85 €</p>
+                    </div>
+                    <div class="with-price">
+                        <p>3 Personnes</p>
+                        <p>119.50 €</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="with-price">
+                        <p>CARRÉ D’AGNEAU ENTIER</p>
+                        <p>97.50 €</p>
+                    </div>
+                    <p class="details">Carré d’Agneau entier découpé à table pour 2/3 personnes, 1 Kg 200 environ, cuisson Max à point</p>
+                </li>    
+                <li>   
+                    <div class="with-price">
+                        <p>CÔTE DE BŒUF</p>
+                        <p>95.50 €</p> 
+                    </div>
+                    <p class="details">Environ 1.200 Gr, pour 2 personnes, cuisson Max à point</p>
+                </li>
+                <li>    
+                    <div class="with-price">
+                        <p>T-BONE CUIT AU BEURRE</p>
+                        <p>99.50 €</p> 
+                    </div>
+                    <p class="details">Environ 1.200 Gr, pour 2 Personnes, arrière train de Côte de Bœuf, cuisson Max à point</p>
+                </li>
+                <li>
+                    <div class="with-price">
+                        <p>TOMAHAWK</p>
+                        <p>99.50 €</p>
+                    </div>
+                    <p class="details">Pièce de Côte de Bœuf maturée avec un os entier, découpée à table, cuisson Max rosée, 1 Kg 200 environ , pour 2/3 personnes</p>
+                </li>
+            </ul>    
+            
+        </section>
+
+        <div class="waiting"></div>
+
+
+        <section id="desserts"></section>
 
 
 
@@ -271,11 +331,11 @@
 
                 // if scrolling down
                 if(scrollPosition[0] > scrollPosition[1]){
-                    document.querySelector('.desserts').style.filter = `brightness(${brightness+=3.5}%)`
+                    document.getElementById('desserts').style.filter = `brightness(${brightness+=3.5}%)`
                 } 
                 //  if scrolling up
                 else{
-                    document.querySelector('.desserts').style.filter = `brightness(${brightness-=3.5}%)`
+                    document.getElementById('desserts').style.filter = `brightness(${brightness-=3.5}%)`
                 }
             }
             else {

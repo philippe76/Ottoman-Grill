@@ -1,5 +1,69 @@
+// ************************************* //
+// ******* MENU GENERAL SETTINGS ****** //
+// ************************************* //
 
 
+.details {
+    color: $aside-color;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.subtitle {
+    color: $aside-color;
+    position: relative;
+    text-align: center;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 105%;
+        width: 3rem;
+        height: 0.9rem;
+        border-bottom: 2px solid rgba($aside-color, 0.4);
+    }
+    &::after {
+        left: 105%;
+    }
+}
+
+
+.with-price {
+    display: flow-root;
+    border-bottom: 1px solid rgba($main-color, 0.3);
+    margin-top: -4.5rem;
+    margin-bottom: 2rem;
+    clear: both;
+    
+    p {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.4rem;
+        color: $main-color;
+        background-color: $main-bg-color;
+        transform: translateY(2.6rem);
+    }
+    p:first-child {
+        float: left;
+        padding-right: 0.5em;
+    }
+    p:last-child {
+        float: right;
+        padding-left: 0.5em;
+        color: $secondary-color;
+        font-family: unset;
+    }
+}
+
+
+
+
+
+// ************************************* //
+// ************ HERO SECTION *********** //
+// ************************************* //
+  
 .menu-video-hero {
 
     @extend.video-hero;
@@ -36,11 +100,6 @@
     }
 }
 
-
-// ************************************* //
-// ************ HERO SECTION *********** //
-// ************************************* //
-  
 .menu-hero {
     margin-top: -3rem;
     text-align: center;
@@ -87,28 +146,10 @@
             letter-spacing: -0.5px;
             text-shadow: 0px 0px 1px #585367;
         }    
-    
-        .subtitle {
-            color: $footer-color;
-            position: relative;
-
-            &::before, &::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 105%;
-                width: 3rem;
-                height: 0.9rem;
-                border-bottom: 2px solid rgba($footer-color, 0.4);
-            }
-            &::after {
-                left: 105%;
-            }
-        }
-
     }
 
 }
+
 
 // ************************************* //
 // ******** MENU PICS [3 IMAGES] ******* //
@@ -124,7 +165,7 @@
 
     // ZOOM ON HOVERED PIC
     &:has(figure:hover) figure:not(:hover) {
-        width: 25%;
+        width: 29%;
     }
 
     img {
@@ -161,12 +202,10 @@
         align-items: center;
     }
 
-
-
 }
 
-// PICS AFTER ENTRIES MENU
-.entries + .menu-pics {
+// H2 AFTER ENTRIES MENU
+#entries + h2 {
     margin-top: 40rem;  // Because of floating entries...
 }
 
@@ -174,44 +213,14 @@
 // ************** ENTRIES ************* //
 // ************************************* //
 
-.entries {
+#entries {
 
     padding: 0 12em;
-
-    h2 {
-        transform: none;
-    }
 
     h3 {
         font-weight: unset;
         letter-spacing: 1px;
         color: $secondary-color;
-    }
-
-    .with-price {
-        display: flow-root;
-        border-bottom: 1px solid rgba($main-color, 0.3);
-        margin-top: -4.5rem;
-        margin-bottom: 2rem;
-        clear: both;
-        
-        p {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: $main-color;
-            background-color: $main-bg-color;
-            transform: translateY(2.6rem);
-        }
-        p:first-child {
-            float: left;
-            padding-right: 0.5em;
-        }
-        p:last-child {
-            float: right;
-            padding-left: 0.5em;
-            color: $secondary-color;
-            font-family: unset;
-        }
     }
 
     .entries-list {
@@ -227,10 +236,7 @@
             color: rgba($main-color, 0.7)
         }
         dd {
-            color: $footer-color;
-            font-style: italic;
-            font-size: 0.9rem;
-            margin: 0;
+            @extend .details;
         }
 
         // make closer "Entrée mixte pour 1 personne"
@@ -254,9 +260,7 @@
         margin-top: -7rem;
 
         .details {
-            color: $footer-color;
-            font-style: italic;
-            font-size: 0.9rem;
+            color: $aside-color;
             margin-top: -0.5rem;
             margin-bottom: 2rem;
         } 
@@ -265,8 +269,53 @@
     
 }
 
+// TITLES WITH SUBTITLES
+.menu-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
 
-.desserts {
+    h2 {
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        margin-top: 0;
+        font-size: 1.2rem;
+    }
+}
+
+
+.exception-meats {
+
+    padding: 0 12em;
+
+    li:nth-child(1), li:nth-child(2) {
+        float: left;
+        clear: both;
+        width: 50%;
+    }
+
+    li:nth-child(3) {
+        margin-top: -15rem;
+    }
+
+    li:nth-child(2) ~ li {
+        float: right;
+        clear: both;
+        width: calc(50% - 7rem);
+        margin-left: 7rem;
+    }
+}
+
+
+.waiting {
+    height: 500px;
+    clear: both;
+}
+
+#desserts {
     height: 100vh;
     background: linear-gradient(to top, rgba(26, 17, 3, 0.75), rgba(4, 4, 4, 0.75)),
     url(img/turkish-tea.jpg) no-repeat;

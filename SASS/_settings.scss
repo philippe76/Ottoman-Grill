@@ -7,12 +7,16 @@ $main-bg-color: #040404;
 $main-color: #e5cfbd;
 $secondary-color: #dca26b; 
 $main-button-txt: #080d16; 
-$footer-color: #757575;
+$aside-color: #757575;
 $gradient-overlay: linear-gradient(to right, rgba(23, 23, 23, 0.75),  rgba(23, 23, 23, 0.75));
 $gradient-melted-overlay: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgba(4, 4, 4, 1));
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -43,14 +47,14 @@ img {
     color: $main-color;
     font-weight: unset;
     letter-spacing: 1px;
-    transform: scaleY(1.3);
     text-transform: uppercase;
     text-align: center;
 }
 
 h2 {
-    @extend .main-title
+    @extend .main-title;
 }
+
 
 .book-table {
     background-color: $secondary-color;
@@ -85,7 +89,6 @@ h2 {
     justify-content: center;
     align-items: center;
     @extend .main-title;
-    transform: none;
     color: $secondary-color;
     background-color: rgba(4, 4, 4, 0.9);
     cursor: pointer;

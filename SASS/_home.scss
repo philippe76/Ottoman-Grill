@@ -23,8 +23,8 @@
             background: $gradient-overlay, url(img/meat-kabobs.jpeg) center;
         }
         75% {
-            background: $gradient-overlay, url(img/pide-stone-oven.jpg);
-            background-size: contain;
+            background: $gradient-overlay, url(img/pide-stone-oven.jpg) no-repeat;
+            background-size: cover;
         }
         100% {
             background: $gradient-overlay, url(img/kunefe-scaled.jpg) no-repeat;
@@ -186,7 +186,6 @@
         align-items: center;
 
         h2 {
-            transform: unset;
             margin-bottom: 0;
         }
         p {
@@ -220,7 +219,6 @@
         
         h2 {
             text-transform: unset;
-            transform: none;
             text-align: left;
             line-height: 1.1;
             margin: 1rem 0;
@@ -281,7 +279,6 @@
 
         h2 {
             text-transform: unset;
-            transform: none;
             margin-bottom: 0;
         }
         p {
@@ -306,7 +303,7 @@ footer {
     }
 
     a {
-        color: $footer-color;
+        color: $aside-color;
     }
 
     .internal-links {
@@ -349,7 +346,7 @@ footer {
         padding: 0 2rem;
         margin-top: 5em;
         font-size: 0.9rem;
-        color: $footer-color;
+        color: $aside-color;
     }
 }
 

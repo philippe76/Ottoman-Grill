@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: #040404;
@@ -33,7 +37,6 @@ img {
   color: #e5cfbd;
   font-weight: unset;
   letter-spacing: 1px;
-  transform: scaleY(1.3);
   text-transform: uppercase;
   text-align: center;
 }
@@ -69,7 +72,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: none;
   color: #dca26b;
   background-color: rgba(4, 4, 4, 0.9);
   cursor: pointer;
@@ -121,8 +123,8 @@ header .menu-link {
     background: linear-gradient(to right, rgba(23, 23, 23, 0.75), rgba(23, 23, 23, 0.75)), url(img/meat-kabobs.jpeg) center;
   }
   75% {
-    background: linear-gradient(to right, rgba(23, 23, 23, 0.75), rgba(23, 23, 23, 0.75)), url(img/pide-stone-oven.jpg);
-    background-size: contain;
+    background: linear-gradient(to right, rgba(23, 23, 23, 0.75), rgba(23, 23, 23, 0.75)), url(img/pide-stone-oven.jpg) no-repeat;
+    background-size: cover;
   }
   100% {
     background: linear-gradient(to right, rgba(23, 23, 23, 0.75), rgba(23, 23, 23, 0.75)), url(img/kunefe-scaled.jpg) no-repeat;
@@ -257,7 +259,6 @@ header .menu-link {
   align-items: center;
 }
 .video-hero .overlay h2, .menu-video-hero .overlay h2, .menu-video-hero .overlay-menu h2 {
-  transform: unset;
   margin-bottom: 0;
 }
 .video-hero .overlay p, .menu-video-hero .overlay p, .menu-video-hero .overlay-menu p {
@@ -284,7 +285,6 @@ header .menu-link {
 }
 .intro-menu article:first-of-type h2 {
   text-transform: unset;
-  transform: none;
   text-align: left;
   line-height: 1.1;
   margin: 1rem 0;
@@ -330,7 +330,6 @@ header .menu-link {
 }
 .book-hero article h2 {
   text-transform: unset;
-  transform: none;
   margin-bottom: 0;
 }
 .book-hero article p {
@@ -395,6 +394,56 @@ hr {
   position: relative;
   bottom: 5rem;
   width: 100%;
+}
+
+.details, #entries .entries-list dd {
+  color: #757575;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.subtitle {
+  color: #757575;
+  position: relative;
+  text-align: center;
+}
+.subtitle::before, .subtitle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 105%;
+  width: 3rem;
+  height: 0.9rem;
+  border-bottom: 2px solid rgba(117, 117, 117, 0.4);
+}
+.subtitle::after {
+  left: 105%;
+}
+
+.with-price {
+  display: flow-root;
+  border-bottom: 1px solid rgba(229, 207, 189, 0.3);
+  margin-top: -4.5rem;
+  margin-bottom: 2rem;
+  clear: both;
+}
+.with-price p {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: #e5cfbd;
+  background-color: #040404;
+  transform: translateY(2.6rem);
+}
+.with-price p:first-child {
+  float: left;
+  padding-right: 0.5em;
+}
+.with-price p:last-child {
+  float: right;
+  padding-left: 0.5em;
+  color: #dca26b;
+  font-family: unset;
 }
 
 .menu-video-hero {
@@ -467,22 +516,6 @@ hr {
   letter-spacing: -0.5px;
   text-shadow: 0px 0px 1px #585367;
 }
-.menu-hero .hero-title .subtitle {
-  color: #757575;
-  position: relative;
-}
-.menu-hero .hero-title .subtitle::before, .menu-hero .hero-title .subtitle::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 105%;
-  width: 3rem;
-  height: 0.9rem;
-  border-bottom: 2px solid rgba(117, 117, 117, 0.4);
-}
-.menu-hero .hero-title .subtitle::after {
-  left: 105%;
-}
 
 .menu-pics {
   clear: both;
@@ -493,7 +526,7 @@ hr {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.486);
 }
 .menu-pics:has(figure:hover) figure:not(:hover) {
-  width: 25%;
+  width: 29%;
 }
 .menu-pics img {
   width: 100%;
@@ -524,84 +557,86 @@ hr {
   align-items: center;
 }
 
-.entries + .menu-pics {
+#entries + h2 {
   margin-top: 40rem;
 }
 
-.entries {
+#entries {
   padding: 0 12em;
 }
-.entries h2 {
-  transform: none;
-}
-.entries h3 {
+#entries h3 {
   font-weight: unset;
   letter-spacing: 1px;
   color: #dca26b;
 }
-.entries .with-price {
-  display: flow-root;
-  border-bottom: 1px solid rgba(229, 207, 189, 0.3);
-  margin-top: -4.5rem;
-  margin-bottom: 2rem;
-  clear: both;
-}
-.entries .with-price p {
-  font-family: "Playfair Display", serif;
-  font-size: 1.4rem;
-  color: #e5cfbd;
-  background-color: #040404;
-  transform: translateY(2.6rem);
-}
-.entries .with-price p:first-child {
-  float: left;
-  padding-right: 0.5em;
-}
-.entries .with-price p:last-child {
-  float: right;
-  padding-left: 0.5em;
-  color: #dca26b;
-  font-family: unset;
-}
-.entries .entries-list dl {
+#entries .entries-list dl {
   margin: 0.3rem;
   margin-left: 0.6rem;
 }
-.entries .entries-list dt {
+#entries .entries-list dt {
   float: left;
   clear: both;
   margin-right: 1rem;
   color: rgba(229, 207, 189, 0.7);
 }
-.entries .entries-list dd {
-  color: #757575;
-  font-style: italic;
-  font-size: 0.9rem;
-  margin: 0;
-}
-.entries .entries-list + .with-price p {
+#entries .entries-list + .with-price p {
   margin-top: -1.2rem;
 }
-.entries li:not(:last-of-type) {
+#entries li:not(:last-of-type) {
   float: left;
   clear: both;
   width: 50%;
 }
-.entries li:last-of-type {
+#entries li:last-of-type {
   float: right;
   width: calc(50% - 7rem);
   margin-left: 7rem;
   margin-top: -7rem;
 }
-.entries li:last-of-type .details {
+#entries li:last-of-type .details, #entries li:last-of-type .entries-list dd, #entries .entries-list li:last-of-type dd {
   color: #757575;
-  font-style: italic;
-  font-size: 0.9rem;
   margin-top: -0.5rem;
   margin-bottom: 2rem;
 }
 
-.desserts {
+.menu-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0;
+}
+.menu-title h2 {
+  line-height: 1.2;
+}
+.menu-title .subtitle {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.exception-meats {
+  padding: 0 12em;
+}
+.exception-meats li:nth-child(1), .exception-meats li:nth-child(2) {
+  float: left;
+  clear: both;
+  width: 50%;
+}
+.exception-meats li:nth-child(3) {
+  margin-top: -15rem;
+}
+.exception-meats li:nth-child(2) ~ li {
+  float: right;
+  clear: both;
+  width: calc(50% - 7rem);
+  margin-left: 7rem;
+}
+
+.waiting {
+  height: 500px;
+  clear: both;
+}
+
+#desserts {
   height: 100vh;
   background: linear-gradient(to top, rgba(26, 17, 3, 0.75), rgba(4, 4, 4, 0.75)), url(img/turkish-tea.jpg) no-repeat;
   background-attachment: fixed;
