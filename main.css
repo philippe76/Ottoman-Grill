@@ -431,7 +431,11 @@ hr {
   color: #e5cfbd;
   display: flex;
   align-items: center;
-  width: 100%;
+  flex-shrink: 0;
+  flex-grow: 1;
+  flex-basis: calc(33.3333333333% - 2rem);
+  margin-bottom: 0;
+  margin-top: 1.5rem;
 }
 .with-price p:last-child {
   color: #dca26b;
@@ -442,13 +446,40 @@ hr {
   background-color: rgba(229, 207, 189, 0.3);
   height: 1px;
   flex-grow: 1;
-  flex-shrink: 3;
+  flex-shrink: 1;
+  flex-basis: calc(33.3333333333% - 2rem);
 }
 .with-price p::after {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 .with-price p::before {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
+}
+
+.menu-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  margin-bottom: 3rem;
+  clear: both;
+}
+.menu-title h2 {
+  line-height: 1.2;
+}
+.menu-title .subtitle {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+section:has(.menu-title) {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section:has(.menu-title) li {
+  float: left;
+  clear: both;
+  width: 50%;
 }
 
 .menu-video-hero {
@@ -562,10 +593,6 @@ hr {
   align-items: center;
 }
 
-#entries + h2 {
-  margin-top: 40rem;
-}
-
 #entries {
   max-width: 1200px;
   margin: 0 auto;
@@ -574,6 +601,7 @@ hr {
   font-weight: unset;
   letter-spacing: 1px;
   color: #dca26b;
+  margin-bottom: 0;
 }
 #entries .entries-list dl {
   margin: 0.3rem;
@@ -585,70 +613,75 @@ hr {
   margin-right: 1rem;
   color: rgba(229, 207, 189, 0.7);
 }
-#entries li:not(:last-of-type) {
-  float: left;
-  clear: both;
-  width: 50%;
-}
 #entries li:last-of-type {
   float: right;
-  width: calc(50% - 5rem);
-  margin-left: 5rem;
+  width: calc(50% - 4rem);
+  margin-left: 4rem;
+  margin-top: -39rem;
+}
+
+#entries + h2 {
+  clear: both;
+  padding-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.meats li:first-of-type p:first-of-type {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+}
+.meats p:first-of-type {
+  margin-bottom: 0;
+}
+.meats li:nth-child(2) ~ li {
+  float: right;
+  width: calc(50% - 4rem);
+  margin-left: 4rem;
+}
+.meats li:nth-child(3) {
+  margin-top: -23rem;
+}
+.meats li:nth-child(4) {
+  margin-top: -17rem;
+}
+.meats li:last-of-type {
   margin-top: -7rem;
 }
 
-.menu-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5rem 0;
+.grills li:nth-child(3) ~ li, .traditionnal li:nth-child(3) ~ li {
+  float: right;
+  width: calc(50% - 4rem);
+  margin-left: 4rem;
 }
-.menu-title h2 {
-  line-height: 1.2;
+.grills li:nth-child(4), .traditionnal li:nth-child(4) {
+  margin-top: -17rem;
 }
-.menu-title .subtitle {
-  margin-top: 0;
-  font-size: 1.2rem;
+.grills li:nth-child(5), .traditionnal li:nth-child(5) {
+  margin-top: -11rem;
+}
+.grills li:nth-child(6), .traditionnal li:nth-child(6) {
+  margin-top: -5rem;
+}
+.grills li:nth-child(7), .traditionnal li:nth-child(7) {
+  clear: both;
 }
 
-.exception-meats {
-  padding: 0 12em;
-}
-.exception-meats li:first-of-type p:first-of-type {
-  font-family: "Playfair Display", serif;
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-.exception-meats li:nth-child(1), .exception-meats li:nth-child(2) {
-  float: left;
-  clear: both;
-  width: 50%;
-}
-.exception-meats li:nth-child(3) {
-  margin-top: -21rem;
-}
-.exception-meats li:nth-child(4) {
-  margin-top: -15rem;
-}
-.exception-meats li:last-of-type {
-  margin-top: -8rem;
-}
-.exception-meats li:nth-child(2) ~ li {
+.steaks li:nth-child(4) ~ li {
   float: right;
-  clear: both;
-  width: calc(50% - 7rem);
-  margin-left: 7rem;
+  width: calc(50% - 4rem);
+  margin-left: 4rem;
 }
-.exception-meats .details:not(p + .details):not(#entries .entries-list p + dd), .exception-meats #entries .entries-list dd:not(p + .details):not(#entries .entries-list p + dd), #entries .entries-list .exception-meats dd:not(p + .details):not(#entries .entries-list p + dd) {
-  margin-top: -1.5rem;
-  margin-bottom: 1rem;
+.steaks li:nth-child(5) {
+  margin-top: -25rem;
 }
-.exception-meats p + .details, .exception-meats #entries .entries-list p + dd, #entries .entries-list .exception-meats p + dd {
-  margin-top: -0.5rem;
+.steaks li:nth-child(6) {
+  margin-top: -19rem;
 }
-.exception-meats p {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.steaks li:nth-child(7) {
+  margin-top: -13rem;
+}
+.steaks li:nth-child(8) {
+  margin-top: -5rem;
 }
 
 .waiting {

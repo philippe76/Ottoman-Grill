@@ -42,10 +42,11 @@
         
         display: flex;
         align-items: center;
-        width: 100%;
-        // flex-shrink: 0;
-        // flex-grow: 1;
-        // flex-basis: calc(100% / 3);
+        flex-shrink: 0;
+        flex-grow: 1;
+        flex-basis: calc((100% / 3) - 2rem);
+        margin-bottom: 0;
+        margin-top: 1.5rem;
     }
 
     p:last-child {
@@ -59,19 +60,48 @@
         background-color: rgba($main-color, 0.3);
         height: 1px;
         flex-grow: 1;
-        flex-shrink: 3;
-        // flex-basis: calc(100% / 3);
+        flex-shrink: 1;
+        flex-basis: calc((100% / 3) - 2rem);
     }    
 
     p::after {
-        margin-left: 0.5rem;
+        margin-left: 1rem;
     }
     p::before {
-        margin-right: 0.5rem;
+        margin-right: 1rem;
     }
 }
 
 
+// TITLES WITH SUBTITLES
+.menu-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+    clear: both;
+
+    h2 {
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        margin-top: 0;
+        font-size: 1.2rem;
+    }
+}
+
+section:has(.menu-title) {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    li {
+        float: left;
+        clear: both;
+        width: 50%;
+    }
+}
 
 
 
@@ -219,10 +249,6 @@
 
 }
 
-// H2 AFTER ENTRIES MENU
-#entries + h2 {
-    margin-top: 40rem;  // Because of floating entries...
-}
 
 // ************************************* //
 // ************** ENTRIES ************* //
@@ -230,7 +256,6 @@
 
 #entries {
 
-    // padding: 0 12em;
     max-width: 1200px;
     margin: 0 auto;
 
@@ -238,6 +263,7 @@
         font-weight: unset;
         letter-spacing: 1px;
         color: $secondary-color;
+        margin-bottom: 0;
     }
 
     .entries-list {
@@ -257,90 +283,102 @@
         }
     }
 
-    // ON LEFT SIDE : Soupe et entrées 
-    li:not(:last-of-type) {
-        float: left;
-        clear: both;
-        width: 50%;
-    }
-
-    // ON RIGHT SIDE : Salades à droite 
+    // SECOND COLUMN
     li:last-of-type {
         float: right;
-        width: calc(50% - 5rem);
-        margin-left: 5rem;
-        margin-top: -7rem;
+        width: calc(50% - 4rem);
+        margin-left: 4rem;
+        margin-top: -39rem;
     }
 
     
 }
 
-// TITLES WITH SUBTITLES
-.menu-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5rem 0;
-
-    h2 {
-        line-height: 1.2;
-    }
-
-    .subtitle {
-        margin-top: 0;
-        font-size: 1.2rem;
-    }
+// H2 AFTER ENTRIES MENU
+#entries + h2 {
+    clear: both;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 
-.exception-meats {
-
-    padding: 0 12em;
+.meats {
 
     li:first-of-type p:first-of-type {
         font-family: 'Playfair Display', serif;
         font-size: 1.4rem;
-        margin-bottom: 0.5rem;
     }
 
-    li:nth-child(1), li:nth-child(2) {
-        float: left;
-        clear: both;
-        width: 50%;
+    p:first-of-type {
+        margin-bottom: 0;
     }
 
-    // 2nd COLUMN
-    li:nth-child(3) {
-        margin-top: -21rem;
-    }
-    li:nth-child(4) {
-        margin-top: -15rem;
-    }
-    li:last-of-type {
-        margin-top: -8rem;
-    }
-
+    // SECOND COLUMN
     li:nth-child(2) ~ li {
         float: right;
+        // clear: both;
+        width: calc(50% - 4rem);
+        margin-left: 4rem;
+    }
+
+    li:nth-child(3) {
+        margin-top: -23rem;
+    }
+    li:nth-child(4) {
+        margin-top: -17rem;
+    }
+    li:last-of-type {
+        margin-top: -7rem;
+    }
+
+
+}
+
+
+.grills, .traditionnal {
+
+    // SECOND COLUMN
+    li:nth-child(3) ~ li {
+        float: right;
+        width: calc(50% - 4rem);
+        margin-left: 4rem;
+    }
+
+    li:nth-child(4) {
+        margin-top: -17rem;
+    }
+    li:nth-child(5) {
+        margin-top: -11rem;
+    }
+    li:nth-child(6) {
+        margin-top: -5rem;
+    }
+    li:nth-child(7) {
         clear: both;
-        width: calc(50% - 7rem);
-        margin-left: 7rem;
+    }
+}
+
+.steaks {
+
+    // SECOND COLUMN
+    li:nth-child(4) ~ li {
+        float: right;
+        width: calc(50% - 4rem);
+        margin-left: 4rem;
     }
 
-    .details:not(p + .details) {
-        margin-top: -1.5rem;
-        margin-bottom: 1rem;
+    li:nth-child(5) {
+        margin-top: -25rem;
     }
-    p + .details {
-        margin-top: -0.5rem;
+    li:nth-child(6) {
+        margin-top: -19rem;
     }
-
-    p {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        // transform: translateY(3rem);
+    li:nth-child(7) {
+        margin-top: -13rem;
     }
-
+    li:nth-child(8) {
+        margin-top: -5rem;
+    }
 }
 
 
