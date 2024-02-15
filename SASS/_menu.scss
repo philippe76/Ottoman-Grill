@@ -31,28 +31,43 @@
 
 
 .with-price {
-    display: flow-root;
-    border-bottom: 1px solid rgba($main-color, 0.3);
-    margin-top: -4.5rem;
-    margin-bottom: 2rem;
+
+    display: flex;
     clear: both;
     
     p {
         font-family: 'Playfair Display', serif;
         font-size: 1.4rem;
         color: $main-color;
-        background-color: $main-bg-color;
-        transform: translateY(2.6rem);
+        
+        display: flex;
+        align-items: center;
+        width: 100%;
+        // flex-shrink: 0;
+        // flex-grow: 1;
+        // flex-basis: calc(100% / 3);
     }
-    p:first-child {
-        float: left;
-        padding-right: 0.5em;
-    }
+
     p:last-child {
-        float: right;
-        padding-left: 0.5em;
         color: $secondary-color;
         font-family: unset;
+    }
+
+    // CREATING LINE BETWEEN ITEMS
+    p:first-child::after, p:last-child::before {
+        content: '';
+        background-color: rgba($main-color, 0.3);
+        height: 1px;
+        flex-grow: 1;
+        flex-shrink: 3;
+        // flex-basis: calc(100% / 3);
+    }    
+
+    p::after {
+        margin-left: 0.5rem;
+    }
+    p::before {
+        margin-right: 0.5rem;
     }
 }
 
@@ -215,7 +230,9 @@
 
 #entries {
 
-    padding: 0 12em;
+    // padding: 0 12em;
+    max-width: 1200px;
+    margin: 0 auto;
 
     h3 {
         font-weight: unset;
@@ -238,11 +255,6 @@
         dd {
             @extend .details;
         }
-
-        // make closer "Entrée mixte pour 1 personne"
-        & + .with-price p {
-            margin-top: -1.2rem;
-        }
     }
 
     // ON LEFT SIDE : Soupe et entrées 
@@ -255,15 +267,9 @@
     // ON RIGHT SIDE : Salades à droite 
     li:last-of-type {
         float: right;
-        width: calc(50% - 7rem);
-        margin-left: 7rem;
+        width: calc(50% - 5rem);
+        margin-left: 5rem;
         margin-top: -7rem;
-
-        .details {
-            color: $aside-color;
-            margin-top: -0.5rem;
-            margin-bottom: 2rem;
-        } 
     }
 
     

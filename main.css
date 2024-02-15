@@ -422,28 +422,33 @@ hr {
 }
 
 .with-price {
-  display: flow-root;
-  border-bottom: 1px solid rgba(229, 207, 189, 0.3);
-  margin-top: -4.5rem;
-  margin-bottom: 2rem;
+  display: flex;
   clear: both;
 }
 .with-price p {
   font-family: "Playfair Display", serif;
   font-size: 1.4rem;
   color: #e5cfbd;
-  background-color: #040404;
-  transform: translateY(2.6rem);
-}
-.with-price p:first-child {
-  float: left;
-  padding-right: 0.5em;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 .with-price p:last-child {
-  float: right;
-  padding-left: 0.5em;
   color: #dca26b;
   font-family: unset;
+}
+.with-price p:first-child::after, .with-price p:last-child::before {
+  content: "";
+  background-color: rgba(229, 207, 189, 0.3);
+  height: 1px;
+  flex-grow: 1;
+  flex-shrink: 3;
+}
+.with-price p::after {
+  margin-left: 0.5rem;
+}
+.with-price p::before {
+  margin-right: 0.5rem;
 }
 
 .menu-video-hero {
@@ -562,7 +567,8 @@ hr {
 }
 
 #entries {
-  padding: 0 12em;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 #entries h3 {
   font-weight: unset;
@@ -579,9 +585,6 @@ hr {
   margin-right: 1rem;
   color: rgba(229, 207, 189, 0.7);
 }
-#entries .entries-list + .with-price p {
-  margin-top: -1.2rem;
-}
 #entries li:not(:last-of-type) {
   float: left;
   clear: both;
@@ -589,14 +592,9 @@ hr {
 }
 #entries li:last-of-type {
   float: right;
-  width: calc(50% - 7rem);
-  margin-left: 7rem;
+  width: calc(50% - 5rem);
+  margin-left: 5rem;
   margin-top: -7rem;
-}
-#entries li:last-of-type .details, #entries li:last-of-type .entries-list dd, #entries .entries-list li:last-of-type dd {
-  color: #757575;
-  margin-top: -0.5rem;
-  margin-bottom: 2rem;
 }
 
 .menu-title {
