@@ -616,19 +616,41 @@ hr {
 .exception-meats {
   padding: 0 12em;
 }
+.exception-meats li:first-of-type p:first-of-type {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
 .exception-meats li:nth-child(1), .exception-meats li:nth-child(2) {
   float: left;
   clear: both;
   width: 50%;
 }
 .exception-meats li:nth-child(3) {
+  margin-top: -21rem;
+}
+.exception-meats li:nth-child(4) {
   margin-top: -15rem;
+}
+.exception-meats li:last-of-type {
+  margin-top: -8rem;
 }
 .exception-meats li:nth-child(2) ~ li {
   float: right;
   clear: both;
   width: calc(50% - 7rem);
   margin-left: 7rem;
+}
+.exception-meats .details:not(p + .details):not(#entries .entries-list p + dd), .exception-meats #entries .entries-list dd:not(p + .details):not(#entries .entries-list p + dd), #entries .entries-list .exception-meats dd:not(p + .details):not(#entries .entries-list p + dd) {
+  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+}
+.exception-meats p + .details, .exception-meats #entries .entries-list p + dd, #entries .entries-list .exception-meats p + dd {
+  margin-top: -0.5rem;
+}
+.exception-meats p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .waiting {
