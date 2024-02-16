@@ -184,20 +184,6 @@
     </footer>
     <hr>
 
-    <script>
-        
-        window.onscroll = function() {
-            if (window.scrollY > 0){  
-                document.querySelector('header').classList.add("header-border");
-                console.log('HERE');
-            }
-            else{
-                document.querySelector('header').classList.remove("header-border");
-            }
-        }
-        
-        document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear())
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

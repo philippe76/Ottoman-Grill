@@ -429,9 +429,9 @@
 
             <div class="fish-pics">
                 <img src="img/raw-fish.jpeg" alt="poisson cru sur planche avec aromates, oignon coupé et tranches de citron">
-                <i class="fa-solid fa-caret-up" id="dropRawFish"></i>
+                <i class="fa-solid fa-caret-up" id="dropCookedFish"></i>
                 <img src="img/cooked-fish.jpeg" alt="assiette de poisson cuit avec tomate, oignon et salade">
-                <i class="fa-solid fa-caret-down" id="dropCookedFish"></i>
+                <i class="fa-solid fa-caret-down" id="dropRawFish"></i>
             </div>
 
             <div class="with-price">
@@ -518,44 +518,6 @@
     </footer>
     <hr>
 
-    <script>
-
-        let scrollPosition = [];
-        let brightness = 55;
-
-        window.onscroll = function() {
-
-            // ADD BORDER TO HEADER 
-            if (window.scrollY > 0){  
-                document.querySelector('header').classList.add("header-border");
-            }
-            else {
-                document.querySelector('header').classList.remove("header-border");
-            }
-
-            // INCREASE - DECREASE BRIGHTNESS OF BACKGROUND
-            if (window.scrollY > 1940)  {
-
-                scrollPosition.splice(1); // delete too old position
-                scrollPosition.unshift(Math.round(window.scrollY)); // Add new position
-
-                // if scrolling down
-                if(scrollPosition[0] > scrollPosition[1]){
-                    document.getElementById('desserts').style.filter = `brightness(${brightness+=3.5}%)`
-                } 
-                //  if scrolling up
-                else{
-                    document.getElementById('desserts').style.filter = `brightness(${brightness-=3.5}%)`
-                }
-            }
-            else {
-                brightness = 55;
-            }
-        }
-
-        document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear());
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
