@@ -421,6 +421,28 @@
 
         </section>
 
+        <section class="fish">
+            <div class="menu-title">
+                <h2>DORADE ROYALE</h2>
+                <p class="subtitle">Servie uniquement les vendredi, samedi et dimanche  </p>
+            </div>
+
+            <div class="fish-pics">
+                <img src="img/raw-fish.jpeg" alt="poisson cru sur planche avec aromates, oignon coupé et tranches de citron">
+                <i class="fa-solid fa-caret-up" id="dropRawFish"></i>
+                <img src="img/cooked-fish.jpeg" alt="assiette de poisson cuit avec tomate, oignon et salade">
+                <i class="fa-solid fa-caret-down" id="dropCookedFish"></i>
+            </div>
+
+            <div class="with-price">
+                <p>DORADE ROYALE</p>
+                <p>25.90 €</p>
+            </div>
+            <p class="details">Dorade Royale grillée - temps de cuisson 25/30 Min </p>    
+
+        </section>
+
+
         <div class="waiting"></div>
 
 
@@ -501,7 +523,6 @@
         let scrollPosition = [];
         let brightness = 55;
 
-
         window.onscroll = function() {
 
             // ADD BORDER TO HEADER 
@@ -530,9 +551,6 @@
             else {
                 brightness = 55;
             }
-        
-
-
         }
 
         document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear());
