@@ -741,6 +741,29 @@ section:has(.menu-title) li {
   margin-top: 12rem;
 }
 
+.menu-extra {
+  clear: both;
+  height: 80vh;
+  margin-top: 20rem !important;
+  background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgb(4, 4, 4)), url(img/pide-stone-oven.jpg) center;
+}
+.menu-extra .menu-title {
+  padding-top: 0;
+}
+.menu-extra .menu-title h2 {
+  color: #dca26b;
+  font-size: 1.8rem;
+  margin: 0;
+}
+.menu-extra .menu-card {
+  background-color: #e5cfbd;
+  padding-top: 0;
+  padding: 3em;
+  color: #000;
+  width: 50%;
+  height: 100%;
+}
+
 .waiting {
   height: 500px;
   clear: both;

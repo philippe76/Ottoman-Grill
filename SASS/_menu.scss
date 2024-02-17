@@ -450,6 +450,33 @@ section:has(.menu-title) {
     }
 }
 
+
+.menu-extra {
+    clear: both;
+    height: 80vh;
+    margin-top: 20rem !important;   // OVER WRITTEN
+    background: $gradient-melted-overlay, url(img/pide-stone-oven.jpg) center;
+
+    .menu-title {
+        padding-top: 0;
+
+        h2 {
+            color: $secondary-color;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+    }
+    .menu-card {
+        background-color: $main-color;
+        padding-top: 0;
+        padding: 3em;
+        color: #000;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+
 .waiting {
     height: 500px;
     clear: both;
