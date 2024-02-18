@@ -456,7 +456,7 @@ section:has(.menu-title) {
     height: 80vh;
     margin-top: 20rem !important;   // OVER WRITTEN
     background: $gradient-melted-overlay, url(img/pide-stone-oven.jpg) center;
-
+    background-attachment: fixed;
     .menu-title {
         padding-top: 0;
 
@@ -491,15 +491,26 @@ section:has(.menu-title) {
 }
 
 
-.waiting {
-    height: 500px;
-    clear: both;
-}
-
 #desserts {
-    height: 100vh;
-    background: linear-gradient(to top, rgba(26, 17, 3, 0.75), rgba(4, 4, 4, 0.75)),
-    url(img/turkish-tea.jpg) no-repeat;
+    height: 85vh;
+    background: $gradient-melted-overlay, url(img/turkish-tea.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
+
+    .menu-title {
+        margin-bottom: 1.5rem;
+    }
+
+    .menu-card {
+        float: right;
+
+        p {
+            margin: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        li .details {
+            margin-top: -0.8rem;
+        }
+    }
 } 

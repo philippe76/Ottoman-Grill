@@ -746,6 +746,7 @@ section:has(.menu-title) li {
   height: 80vh;
   margin-top: 20rem !important;
   background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgb(4, 4, 4)), url(img/pide-stone-oven.jpg) center;
+  background-attachment: fixed;
 }
 .menu-extra .menu-title {
   padding-top: 0;
@@ -776,14 +777,22 @@ section:has(.menu-title) li {
   margin-bottom: 0;
 }
 
-.waiting {
-  height: 500px;
-  clear: both;
-}
-
 #desserts {
-  height: 100vh;
-  background: linear-gradient(to top, rgba(26, 17, 3, 0.75), rgba(4, 4, 4, 0.75)), url(img/turkish-tea.jpg) no-repeat;
+  height: 85vh;
+  background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgb(4, 4, 4)), url(img/turkish-tea.jpg) no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+#desserts .menu-title {
+  margin-bottom: 1.5rem;
+}
+#desserts .menu-card {
+  float: right;
+}
+#desserts .menu-card p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+#desserts .menu-card li .details, #desserts .menu-card li #entries .entries-list dd, #entries .entries-list #desserts .menu-card li dd {
+  margin-top: -0.8rem;
 }/*# sourceMappingURL=main.css.map */

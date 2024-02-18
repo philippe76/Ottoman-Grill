@@ -14,23 +14,23 @@
             }
 
             // INCREASE - DECREASE BRIGHTNESS OF BACKGROUND
-            if (window.scrollY > 1940)  {
+            // if (window.scrollY > 1940)  {
 
-                scrollPosition.splice(1); // delete too old position
-                scrollPosition.unshift(Math.round(window.scrollY)); // Add new position
+            //     scrollPosition.splice(1); // delete too old position
+            //     scrollPosition.unshift(Math.round(window.scrollY)); // Add new position
 
-                // if scrolling down
-                if(scrollPosition[0] > scrollPosition[1]){
-                    document.getElementById('desserts').style.filter = `brightness(${brightness+=3.5}%)`
-                } 
-                //  if scrolling up
-                else{
-                    document.getElementById('desserts').style.filter = `brightness(${brightness-=3.5}%)`
-                }
-            }
-            else {
-                brightness = 55;
-            }
+            //     // if scrolling down
+            //     if(scrollPosition[0] > scrollPosition[1]){
+            //         document.getElementById('desserts').style.filter = `brightness(${brightness+=3.5}%)`
+            //     } 
+            //     //  if scrolling up
+            //     else{
+            //         document.getElementById('desserts').style.filter = `brightness(${brightness-=3.5}%)`
+            //     }
+            // }
+            // else {
+            //     brightness = 55;
+            // }
         }
 
         // TOGGLE DOWN FISH IMAGES ON CLICK
