@@ -70,7 +70,7 @@
 
         //  DO NOT WORK FOR HALF AND DOWN
                 console.log('after click : ' + displayedFish); 
-            }      
+        }      
         
         document.getElementById('dropRawFish').onclick = () => toggleFish('raw', 'down');        
         document.getElementById('dropCookedFish').onclick = () => toggleFish('cooked', 'up');

@@ -16,7 +16,7 @@
                 <img src="img/logo-ottoman-gill-header.png" alt="logo Ottoman Grill Restaurant & Grillades">
             </a>
             <a href="menu.html" class="menu-link">Notre Menu</a>
-            <a href="#" class="book-table">Réservez une table</a>
+            <a href="tel:+33139897094" class="book-table">Réservez une table</a>
         </header>
 
 
@@ -55,7 +55,7 @@
                     <img src="img/meat-kabobs.jpeg" alt="Grille de brochettes de veau sur le feu">
                     <figcaption>
                         <p>Les plats</p>
-                        <a href="#" class="book-table">Voir le menu</a>
+                        <a href="#traditionnal" class="book-table">Voir le menu</a>
                     </figcaption>
                 </figure>
                 <figure>
@@ -161,21 +161,21 @@
                 <img src="img/steak-wood-plate.jpeg" alt="steak sur assiette en bois avec salade, sauce poivre et purée maison">
                 <figcaption>
                     <p>Steaks</p>
-                    <a href="#" class="book-table">Voir le menu</a>
+                    <a href="#steaks" class="book-table">Voir le menu</a>
                 </figcaption>
             </figure>
             <figure>
                 <img src="img/lamb-chop-green-pepper.jpg" alt="Côtes d'ageau avec piments verts">
                 <figcaption>
                     <p>Grillades</p>
-                    <a href="#" class="book-table">Voir le menu</a>
+                    <a href="#grills" class="book-table">Voir le menu</a>
                 </figcaption>
             </figure>
             <figure>
                 <img src="img/grilled-fish.jpeg" alt="poisson à cuire sur grille">
                 <figcaption>
                     <p>Poissons</p>
-                    <a href="#" class="book-table">Voir le menu</a>
+                    <a href="#fish" class="book-table">Voir le menu</a>
                 </figcaption>
             </figure>
         </section>
@@ -234,7 +234,7 @@
 
         <section class="grills">
             <div class="menu-title">
-                <h2>LES GRILLADES <br> TRADITIONNELLES </h2>        
+                <h2 id="grills">LES GRILLADES <br> TRADITIONNELLES </h2>        
                 <p class="subtitle">Toutes les grillades sont accompagnées de blé ou riz et de salade </p>
             </div>
             
@@ -296,7 +296,7 @@
 
         <section class="steaks">
             <div class="menu-title">
-                <h2>LES STEAKS </h2>        
+                <h2 id="steaks">LES STEAKS </h2>        
                 <p class="subtitle">Nous vous conseillons une cuisson bleue ou saignante pour les viandes rouges </p>
             </div>
 
@@ -369,7 +369,7 @@
 
         <section class="traditionnal">
             <div class="menu-title">
-                <h2>LES PLATS TRADITIONNELS</h2>
+                <h2 id="traditionnal">LES PLATS TRADITIONNELS</h2>
             </div>
 
             <ul>
@@ -421,7 +421,7 @@
 
         <section class="fish">
             <div class="menu-title">
-                <h2>DORADE ROYALE</h2>
+                <h2 id="fish">DORADE ROYALE</h2>
                 <p class="subtitle">Servie uniquement les vendredi, samedi et dimanche  </p>
             </div>
 
@@ -471,7 +471,7 @@
             </article>
         </section>
 
-        <section id="desserts" class="menu-extra">
+        <section class="menu-extra" id="desserts" >
             <article class="menu-card">
                 <div class="menu-title">
                     <h2>LES DESSERTS</h2>
@@ -531,31 +531,33 @@
     </main>
 
     <footer>
-        <img src="img/logo-ottoman-gill-footer.png" alt="logo Ottoman Grill Restaurant & Grillades">
+        <a href="index.html">
+            <img src="img/logo-ottoman-gill-footer.png" alt="logo Ottoman Grill Restaurant & Grillades">
+        </a>
         <ul class="internal-links">
             <li>
-                <a href="">Ottoman Grill</a>
+                <a href="index.html">Ottoman Grill</a>
             </li>
             <li>
-                <a href="">Notre Chef</a>
+                <a href="index.html">Notre Chef</a>
             </li>
             <li>
-                <a href="">Réservez une table</a>
+                <a href="tel:+33139897094">Réservez une table</a>
             </li>
             <li>
-                <a href="">Nous contacter</a>
+                <a href="tel:+33139897094">Nous contacter</a>
             </li>
             <li>
-                <a href="">Notre menu</a>
+                <a href="menu.html">Notre menu</a>
             </li>
             <li>
-                <a href="">Nos entrées</a>
+                <a href="#entries">Nos entrées</a>
             </li>
             <li>
-                <a href="">Nos plats</a>
+                <a href="#traditionnal">Nos plats</a>
             </li>
             <li>
-                <a href="">Nos desserts</a>
+                <a href="#desserts">Nos desserts</a>
             </li>
         </ul>
         
@@ -597,5 +599,6 @@
     <hr>
 
     <script src="script.js"></script>
+
 </body>
 </html>

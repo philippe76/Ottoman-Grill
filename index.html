@@ -16,7 +16,7 @@
                 <img src="img/logo-ottoman-gill-header.png" alt="logo Ottoman Grill Restaurant & Grillades">
             </a>            
             <a href="menu.html" class="menu-link">Notre Menu</a>
-            <a href="#" class="book-table">Réservez une table</a>
+            <a href="tel:+33139897094" class="book-table">Réservez une table</a>
         </header>
 
         <div class="home-hero">
@@ -29,7 +29,7 @@
         <section class="schedules">
             <p>DECOUVREZ <br> <span>OTTOMAN GRILL</span></p>
             <p>Les meilleures viandes de qualité sont préparées par nos chefs avec des techniques de cuisson spéciales et se déroulent dans vos assiettes accompagnées de légumes. Tous les légumes et la verdure que nous utilisons sont préparés tous les jours afin de ne pas compromettre la fraîcheur. 
-                <a href="#" class="book-table">Réservez une table</a>
+                <a href="tel:+33139897094" class="book-table">Réservez une table</a>
             </p>
             <table>
                 <thead>
@@ -79,7 +79,7 @@
                     <h2>VENTE À EMPORTER</h2>
                     <p>De quoi se régaler à domicile </p>
                 </div>
-                <a href="#" class="book-table">Commandez par téléphone</a>
+                <a href="tel:+33139897094" class="book-table">Commandez par téléphone</a>
               </div>
         </section>
         <section class="intro-menu">
@@ -88,7 +88,7 @@
                 <p>NOTRE MENU</p>
                 <h2>Viandes De Qualité, <br>  Préparées Par <br> Nos Chefs</h2>
                 <p>Les meilleures viandes de qualité sont préparées par nos chefs avec des techniques de cuisson spéciales et se déroulent dans vos assiettes accompagnées de légumes. Tous les légumes et la verdure que nous utilisons sont préparés tous les jours afin de ne pas compromettre la fraîcheur.</p>
-                <a href="#" class="book-table">Voir le menu</a>
+                <a href="menu.html" class="book-table">Voir le menu</a>
             </article>
             <article class="pic-gallery">
                 <figure>
@@ -113,37 +113,39 @@
             <article>
                 <h2>Bienvenue Chez Ottoman Grill</h2>
                 <p>Les meilleures viandes de qualité sont préparées par nos chefs avec des techniques de cuisson spéciales et se déroulent dans vos assiettes accompagnées de légumes. Tous les légumes et la verdure que nous utilisons sont préparés tous les jours afin de ne pas compromettre la fraîcheur.</p>
-                <a href="#" class="book-table">Réservez une table</a>
+                <a href="tel:+33139897094" class="book-table">Réservez une table</a>
             </article>
         </section>
     </main>
 
     <footer>
-        <img src="img/logo-ottoman-gill-footer.png" alt="logo Ottoman Grill Restaurant & Grillades">
+        <a href="index.html">
+            <img src="img/logo-ottoman-gill-footer.png" alt="logo Ottoman Grill Restaurant & Grillades">
+        </a>
         <ul class="internal-links">
             <li>
-                <a href="">Ottoman Grill</a>
+                <a href="index.html">Ottoman Grill</a>
             </li>
             <li>
-                <a href="">Notre Chef</a>
+                <a href="index.html">Notre Chef</a>
             </li>
             <li>
-                <a href="">Réservez une table</a>
+                <a href="tel:+33139897094">Réservez une table</a>
             </li>
             <li>
-                <a href="">Nous contacter</a>
+                <a href="tel:+33139897094">Nous contacter</a>
             </li>
             <li>
-                <a href="">Notre menu</a>
+                <a href="menu.html">Notre menu</a>
             </li>
             <li>
-                <a href="">Nos entrées</a>
+                <a href="menu.html#entries">Nos entrées</a>
             </li>
             <li>
-                <a href="">Nos plats</a>
+                <a href="menu.html#traditionnal">Nos plats</a>
             </li>
             <li>
-                <a href="">Nos desserts</a>
+                <a href="menu.html#desserts">Nos desserts</a>
             </li>
         </ul>
         
@@ -184,6 +186,9 @@
     </footer>
     <hr>
 
-    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear());
+    </script>
+    
 </body>
 </html>
