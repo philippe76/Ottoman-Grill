@@ -467,12 +467,26 @@ section:has(.menu-title) {
         }
     }
     .menu-card {
-        background-color: $main-color;
-        padding-top: 0;
-        padding: 3em;
-        color: #000;
-        width: 50%;
+        width: 45%;
         height: 100%;
+        padding: 1.8em 1.3em;
+        background-color: $main-color;
+        color: #000;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+
+        li {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li:last-of-type p {
+            margin-bottom: 0;
+        }
     }
 }
 
