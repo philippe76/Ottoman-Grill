@@ -37,43 +37,48 @@
 
         let displayedFish = 'half';
               
+        let toggleButtons = document.querySelectorAll('.fish-pics img + i');
+        
+        toggleButtons.forEach(btn => btn.onclick = () => toggleFish(btn.dataset.fish, btn.dataset.toggle))
+        
         function toggleFish(fishName, caret) {
-            
-            console.log('on click : ' + displayedFish);                
 
-            if ((caret === 'up' && displayedFish === 'raw') || 
-                (caret === 'down' && displayedFish === 'cooked')) {
-                document.querySelector('img[src*="raw-fish"]').style.display = 'block';
-                document.querySelector(`img[src*="raw-fish"]`).style.maskImage = 'linear-gradient(#000 50%, transparent 0)';
-                document.querySelector(`img[src*="cooked-fish"]`).style.maskImage = 'linear-gradient(transparent 50%, #000 0)';
+            if (displayedFish === 'half') {   
+                // display down of raw
+                document.querySelector(`img[src*="raw-fish"]`).style.maskImage = "unset";
+
+                // mask top of raw for cooked displaying
+                document.querySelector('img[src*="raw-fish"]').style.display = fishName !== 'cooked' ? 'block' : 'none';
+                
+                // disable toggle caret
+                document.querySelector(`[data-fish="${fishName}"]`).classList.add('noOpacity');
+
+                // update fish variable
+                displayedFish = fishName;    
+            }
+
+            else {
+                
+                // get all carets back
+                document.querySelector(`[data-toggle="down"]`).classList.remove('noOpacity');
+                document.querySelector(`[data-toggle="up"]`).classList.remove('noOpacity');               
+
+                // mask down of raw
+                document.querySelector('img[src*="raw-fish"]').style.maskImage = 'linear-gradient(#000 50%, transparent 0)';
+
+
+                if (displayedFish === 'cooked' && caret === 'down') {
+
+                    // display top of raw
+                    document.querySelector('img[src*="raw-fish"]').style.display = 'block'; 
+                }
+
+                // update fish variable
                 displayedFish = 'half';  
             }
 
-            else if (caret === 'down' && displayedFish !== 'cooked') {
-                document.querySelector(`img[src*="${fishName}-fish"]`).style.maskImage = "unset";
-                if (displayedFish === 'half') {
-                    console.log('HERE');
-
-                }
-                else {
-
-                }
-                document.querySelector('img[src*="raw-fish"]').style.display = 'block';
-                // document.querySelector('img[src*="cooked-fish"]').style.maskImage = 'linear-gradient(#000 50%, transparent 0)';
-                displayedFish = fishName; 
-            }
-            else {
-                document.querySelector(`img[src*="${fishName}-fish"]`).style.maskImage = "unset";
-                document.querySelector('img[src*="raw-fish"]').style.display = fishName !== 'cooked' ? 'block' : 'none'; 
-                displayedFish = fishName; 
-            }
-
-        //  DO NOT WORK FOR HALF AND DOWN
-                console.log('after click : ' + displayedFish); 
         }      
         
-        document.getElementById('dropRawFish').onclick = () => toggleFish('raw', 'down');        
-        document.getElementById('dropCookedFish').onclick = () => toggleFish('cooked', 'up');
 
 
         // HANDLE FOOTER DYNAMIC YEAR 

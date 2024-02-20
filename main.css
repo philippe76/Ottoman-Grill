@@ -485,6 +485,10 @@ section:has(.menu-title) li {
   width: 50%;
 }
 
+.noOpacity {
+  opacity: 0.5;
+}
+
 .menu-video-hero {
   min-height: 100vh;
   margin-top: -7rem;
@@ -698,11 +702,6 @@ section:has(.menu-title) li {
   position: absolute;
   -webkit-mask-image: linear-gradient(#000 50%, transparent 0);
           mask-image: linear-gradient(#000 50%, transparent 0);
-}
-.fish .fish-pics img:last-child {
-  position: absolute;
-  -webkit-mask-image: linear-gradient(transparent 50%, #000 0);
-          mask-image: linear-gradient(transparent 50%, #000 0);
 }
 .fish .fish-pics::before {
   content: "";

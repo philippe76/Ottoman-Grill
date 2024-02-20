@@ -2,6 +2,7 @@
 // ******* MENU GENERAL SETTINGS ****** //
 // ************************************* //
 
+// $down-masked : linear-gradient(#000 50%, transparent 0);
 
 .details {
     color: $aside-color;
@@ -61,7 +62,7 @@
         height: 1px;
         flex-grow: 1;
         flex-shrink: 1;
-        flex-basis: calc((100% / 3) - 2rem);
+        flex-basis: calc((100% / 3) - 2rem);        
     }    
 
     p::after {
@@ -102,6 +103,11 @@ section:has(.menu-title) {
         width: 50%;
     }
 }
+
+.noOpacity {
+    opacity: 0.5;
+}
+
 
 
 
@@ -395,10 +401,10 @@ section:has(.menu-title) {
             position: absolute;
             mask-image: linear-gradient(#000 50%, transparent 0);
         }
-        img:last-child {
-            position: absolute;
-            mask-image: linear-gradient(transparent 50%, #000 0);
-        }
+        // img:last-child {
+        //     position: absolute;
+        //     mask-image: linear-gradient(transparent 50%, #000 0);
+        // }
 
         // white line between pics
         &::before {
