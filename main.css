@@ -57,7 +57,7 @@ img {
 
 @keyframes slideUp {
   from {
-    transform: translateY(300px);
+    transform: translateY(200px);
   }
   to {
     transform: translateY(0);
@@ -218,6 +218,7 @@ hr {
 }
 
 .schedules {
+  opacity: 0;
   height: 100vh;
   display: flex;
   justify-content: space-around;
@@ -263,6 +264,19 @@ hr {
 }
 .schedules table tr:last-child td {
   padding-top: 1rem;
+}
+
+.schedules.slideUp > * {
+  animation: slideUp 0.7s ease-in;
+  transition: opacity 0.7s ease-in;
+}
+
+.schedules.slideUp p:last-of-type {
+  animation-delay: 0.2s;
+}
+
+.schedules.slideUp table {
+  animation-delay: 0.4s;
 }
 
 .testimonials {

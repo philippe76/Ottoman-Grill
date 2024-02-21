@@ -187,6 +187,24 @@
     <hr>
 
     <script>
+
+        // Create the observer
+        const observer = new IntersectionObserver(entries => {
+
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // It's visible. Add the animation class here!
+                    entry.target.style.opacity = 1;
+                    entry.target.classList.add('slideUp')   
+               }
+            })
+        });
+
+        // Choose element to track
+        observer.observe(document.querySelector('.schedules'));
+
+
+
         document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear());
     </script>
     

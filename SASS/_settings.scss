@@ -73,11 +73,12 @@ h2 {
 
 @keyframes slideUp {
     from {
-        transform: translateY(300px);
+        transform: translateY(200px);
     }
     to {transform: translateY(0);
     }
 }
+
 
 .slide-caption {
     position: absolute;
