@@ -88,6 +88,9 @@ header {
   margin: 1rem 0;
   background-color: #040404;
 }
+header img {
+  width: clamp(10rem, 19vw, 14rem);
+}
 header a {
   color: #e5cfbd;
   font-size: 1.4rem;
@@ -96,13 +99,22 @@ header a {
 header .menu-link {
   font-family: "Playfair Display", serif;
   font-size: 2.8rem;
+  font-size: clamp(1.7rem, 3vw, 2.8rem);
   text-transform: unset;
+}
+header .book-table {
+  display: none;
 }
 
 .header-border {
   border-bottom: 1px solid rgba(229, 207, 189, 0.3);
 }
 
+@media screen and (min-width: 992px) {
+  header .book-table {
+    display: block;
+  }
+}
 footer {
   display: flex;
   flex-wrap: wrap;

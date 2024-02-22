@@ -9,6 +9,10 @@ header {
     margin: 1rem 0;
     background-color: $main-bg-color;
 
+    img {
+        width: clamp(10rem, 19vw, 14rem);
+    }
+
     a {
         color: $main-color;
         font-size: 1.4rem;
@@ -18,7 +22,12 @@ header {
     .menu-link {
         font-family: 'Playfair Display', serif;
         font-size: 2.8rem;
+        font-size: clamp(1.7rem, 3vw, 2.8rem);
         text-transform: unset;
+    }
+
+    .book-table {
+        display: none;
     }
      
 }
@@ -28,3 +37,8 @@ header {
 }  
 
 
+@media screen and (min-width: 992px) {
+    header .book-table {
+        display: block;
+    }
+}
