@@ -33,7 +33,8 @@
     }
 
     h1 {
-        font-size: 1.2rem;
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
+        text-align: center;
         font-weight: unset;
         letter-spacing: 1px;
         animation: appear 2s ease;
@@ -50,7 +51,7 @@
 
     p {
         margin-top: 2rem;
-        font-size: 7rem;
+        font-size: clamp(2rem, 10vw, 7rem);
         font-family: 'Playfair Display', serif;
         letter-spacing: 1px;
         text-align: center;
@@ -62,24 +63,20 @@
 
 .schedules {
     opacity: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 6rem 10rem;
+    min-height: 100vh;
+    text-align: center;
+    padding: 3rem;
     background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgba(4, 4, 4, 1)),
     url(img/turkish-roofs.jpg) 50%;
 
-    > * {
-        width: 30%;
-    }
 
     .book-table {
         display: block;
         width: 13rem;
         text-align: center;
         font-size: 1rem;
-        margin-top: 1rem;
+        margin: 0 auto;
+        margin-top: 2rem;
     }
 
     p:first-of-type {
@@ -88,7 +85,7 @@
 
     p + p {
         margin-top: 3.5rem;
-        margin-right: 3rem;
+        // margin-right: 3rem;
     }
 
     p span {
@@ -98,6 +95,8 @@
 
     table {
         border-collapse: collapse;
+        margin: 3.5rem auto;
+        width: 100%;
 
         th {
             font-family: 'Playfair Display', serif;
@@ -105,6 +104,9 @@
             text-align: unset;
             font-weight: unset;
             padding-bottom: 1rem;
+        }
+        th, td {
+            text-align: left;
         }
 
         td:not([rowspan] + td) {
@@ -302,3 +304,50 @@
     }
 }
 
+
+
+@media screen and (min-width: 992px) {
+
+    .schedules {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 3rem;
+        gap: 3rem;
+
+        p:first-of-type {
+            width: 100%;
+        }
+        
+        > * {
+            width: calc(50% - 6rem);
+        }
+
+        .book-table {
+            margin-top: 1rem;
+        }
+
+        table {
+            margin: auto;
+            width: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .schedules {
+
+        padding: 6rem 10rem;
+        gap: 2rem;
+
+        p:first-of-type {
+            width: calc(30% - 2rem);
+        }
+
+        > * {
+            width: calc(30% - 2rem);
+        }
+    }
+}
