@@ -68,6 +68,7 @@
     padding: 3rem;
     background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgba(4, 4, 4, 1)),
     url(img/turkish-roofs.jpg) 50%;
+    overflow: hidden;
 
 
     .book-table {
@@ -140,13 +141,30 @@
     margin: 5rem auto;
     text-align: center;
     font-size: 1.1rem;
+    display: flex;
+    overflow: hidden;
+
+    article {
+        // display: none;
+        opacity: 0;
+        transition: 0.5s ease;
+    }
+
+    article.active {
+        // display: block;
+        opacity: 1;
+    }
+
+    article {
+        min-width: 100%;
+    }
 
     blockquote::before {        
         content: url(img/quotes-right.svg);
         display: block;
         transform: scale(1.8);
         margin-bottom: 1rem;
-        overflow: visible
+        overflow: visible;
     }
     
     blockquote::after {

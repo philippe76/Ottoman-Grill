@@ -235,6 +235,7 @@ hr {
   text-align: center;
   padding: 3rem;
   background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgb(4, 4, 4)), url(img/turkish-roofs.jpg) 50%;
+  overflow: hidden;
 }
 .schedules .book-table {
   display: block;
@@ -296,6 +297,18 @@ hr {
   margin: 5rem auto;
   text-align: center;
   font-size: 1.1rem;
+  display: flex;
+  overflow: hidden;
+}
+.testimonials article {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.testimonials article.active {
+  opacity: 1;
+}
+.testimonials article {
+  min-width: 100%;
 }
 .testimonials blockquote::before {
   content: url(img/quotes-right.svg);

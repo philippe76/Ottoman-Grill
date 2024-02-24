@@ -1,11 +1,13 @@
-        // HANDLE BRIGHTNESS OF BACKGROUND IMAGES ON SCROLL
+        // datas for brightness change
         let scrollPosition = [];
         let brightness = 55;
 
-        // ADD HEADER BOTTOM BORDER ON SCROLL
+
         window.onscroll = function() {
 
-            // ADD BORDER TO HEADER 
+            // **************************************** //
+           // ***** Add header border on scroll ****** //
+          // **************************************** //
             if (window.scrollY > 0){  
                 document.querySelector('header').classList.add("header-border");
             }
@@ -13,7 +15,10 @@
                 document.querySelector('header').classList.remove("header-border");
             }
 
-            // INCREASE - DECREASE BRIGHTNESS OF BACKGROUND
+            // **************************************** //
+           // ** Change section brightness on scroll ** //
+           // **************************************** //
+
             // if (window.scrollY > 1940)  {
 
             //     scrollPosition.splice(1); // delete too old position
@@ -33,7 +38,11 @@
             // }
         }
 
-        // TOGGLE DOWN FISH IMAGES ON CLICK
+
+        
+        // **************************************** //
+        // *********  Toggle fish image  ********** //
+        // **************************************** //
 
         let displayedFish = 'half';
               
@@ -79,7 +88,10 @@
 
         }      
         
-
-
-        // HANDLE FOOTER DYNAMIC YEAR 
+        
+        
+        // **************************************** //
+        // ********  Footer dynamic year  ********* //
+        // **************************************** //
+        
         document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear());
