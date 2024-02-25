@@ -223,6 +223,15 @@
       
 }
 
+.video-hero.slideX {
+    .overlay div {
+        animation: slideToRight 0.7s ease-in;
+    }
+    .overlay a{
+        animation: slideToLeft 0.7s ease-in;
+    }
+}
+
 .intro-menu {
 
     article:first-of-type {

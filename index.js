@@ -7,16 +7,24 @@
         const observer = new IntersectionObserver(entries => {
 
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // It's visible. Add the animation class here!
-                    entry.target.style.opacity = 1;
-                    entry.target.classList.add('slideUp')   
-               }
+
+                if (entry.isIntersecting) {                    
+
+                    if (entry.target.classList.contains('shedules') ) {
+                        entry.target.style.opacity = 1;
+                        entry.target.classList.add('slideUp')   
+                    }
+
+                    if (entry.target.classList.contains('video-hero')) {
+                        entry.target.classList.add('slideX')   
+                    }
+                }
             })
         });
 
-        // Choose element to track
+        // Choose elements to track
         observer.observe(document.querySelector('.schedules'));
+        observer.observe(document.querySelector('.video-hero'));
 
 
 

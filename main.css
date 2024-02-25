@@ -63,6 +63,22 @@ img {
     transform: translateY(0);
   }
 }
+@keyframes slideToRight {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideToLeft {
+  from {
+    transform: translateX(200px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 .slide-caption, .menu-pics figcaption, .intro-menu .pic-gallery figure figcaption {
   position: absolute;
   opacity: 0;
@@ -362,6 +378,13 @@ hr {
 .video-hero .overlay p, .menu-video-hero .overlay p, .menu-video-hero .overlay-menu p {
   margin-top: 0;
   font-size: 1.2rem;
+}
+
+.video-hero.slideX .overlay div, .video-hero.slideX .menu-video-hero .overlay-menu div, .menu-video-hero .video-hero.slideX .overlay-menu div, .slideX.menu-video-hero .overlay div, .slideX.menu-video-hero .overlay-menu div {
+  animation: slideToRight 0.7s ease-in;
+}
+.video-hero.slideX .overlay a, .video-hero.slideX .menu-video-hero .overlay-menu a, .menu-video-hero .video-hero.slideX .overlay-menu a, .slideX.menu-video-hero .overlay a, .slideX.menu-video-hero .overlay-menu a {
+  animation: slideToLeft 0.7s ease-in;
 }
 
 .intro-menu article:first-of-type {

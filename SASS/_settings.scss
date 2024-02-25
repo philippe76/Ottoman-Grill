@@ -79,6 +79,22 @@ h2 {
     }
 }
 
+@keyframes slideToRight {
+    from {
+        transform: translateX(-200px);
+    }
+    to {transform: translateX(0);
+    }
+}
+
+@keyframes slideToLeft {
+    from {
+        transform: translateX(200px);
+    }
+    to {transform: translateX(0);
+    }
+}
+
 
 .slide-caption {
     position: absolute;
