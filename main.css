@@ -313,13 +313,16 @@ hr {
   margin: 5rem auto;
   text-align: center;
   font-size: 1.1rem;
-  display: flex;
   overflow-x: hidden;
   gap: 20px;
 }
+.testimonials .slider {
+  min-width: 100%;
+  display: flex;
+  transition: 0.8s ease;
+}
 .testimonials article {
   min-width: 100%;
-  transition: 0.8s ease;
 }
 .testimonials blockquote::before {
   content: url(img/quotes-right.svg);

@@ -141,13 +141,17 @@
     margin: 5rem auto;
     text-align: center;
     font-size: 1.1rem;
-    display: flex;
     overflow-x: hidden;
     gap: 20px;
+    
+    .slider {
+        min-width: 100%;
+        display: flex;
+        transition: 0.8s ease;
+    }
 
     article {
         min-width: 100%;
-        transition: 0.8s ease;
     }
 
     blockquote::before {        

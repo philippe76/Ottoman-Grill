@@ -32,26 +32,41 @@
         // ********  Testimonial slider  ********* //
         // **************************************** //
 
+        // const articles = document.querySelectorAll('.testimonials article');
+        // let artIndex = 0;
+
+        // function slide() {
+
+        //     articles[artIndex%articles.length].style.transform = "translateX(-100%)";
+        //     articles[artIndex%articles.length].classList.add('noOpacity');
+        //     articles[(artIndex+1)%articles.length].style.transform = "translateX(0)";
+        //     articles[artIndex%articles.length].classList.remove('noOpacity');
+        //     artIndex++;
+            
+        // }
+
+
+        const slider = document.querySelector('.slider');
         const articles = document.querySelectorAll('.testimonials article');
         let artIndex = 0;
-
+        
         function slide() {
+          
+            slider.style.transform = `translateX(${artIndex * -100}%)`;
+        
+            artIndex++;  
+          
+            if(artIndex === articles.length){ 
 
-            articles[artIndex%articles.length].style.transform = "translateX(-100%)";
-            articles[artIndex%articles.length].classList.add('noOpacity');
-            articles[(artIndex+1)%articles.length].style.transform = "translateX(0)";
-            articles[artIndex%articles.length].classList.remove('noOpacity');
-            artIndex++;
-            
+                setTimeout(() => {
+                    artIndex = 0;
+                    slider.style.transform = "translateX(0%)";
+                }, 1500);
+            }
         }
 
-
-
-        setInterval(slide, 1000); 
-
-       
-
-        
+        setInterval(slide, 1500); 
+      
         
         // **************************************** //
         // ********  Footer dynamic year  ********* //
