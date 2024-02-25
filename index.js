@@ -21,28 +21,27 @@
 
 
         // **************************************** //
-        // ********  Testimonials slider  ********* //
+        // ********  Testimonial slider  ********* //
         // **************************************** //
 
-        const testimonials = document.querySelectorAll('.testimonials article');
-        
-        // testimonials.forEach( item => {
-        //     item.style.display = item.classList.contains('active') ? "block" : "none";
-        // })
-
-        // function slideLeft(article) {
-        //     article
-        // }
-
+        const articles = document.querySelectorAll('.testimonials article');
         let artIndex = 0;
-        window.setInterval(function(){
-            // testimonials[artIndex].style.transform = "translateX(-100%)";
-            // testimonials[artIndex%testimonials.length].style.transform = "translateX(-100%)";
-            testimonials[artIndex%testimonials.length].style.transform = "translateX(-100%)";
 
-            testimonials[artIndex%testimonials.length].classList.toggle('active')
+        function slide() {
+
+            articles[artIndex%articles.length].style.transform = "translateX(-100%)";
+            articles[artIndex%articles.length].classList.add('noOpacity');
+            articles[(artIndex+1)%articles.length].style.transform = "translateX(0)";
+            articles[artIndex%articles.length].classList.remove('noOpacity');
             artIndex++;
-        },1000)
+            
+        }
+
+
+
+        setInterval(slide, 1000); 
+
+       
 
         
         
@@ -51,3 +50,5 @@
         // **************************************** //
 
         document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear());
+
+

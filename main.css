@@ -298,17 +298,12 @@ hr {
   text-align: center;
   font-size: 1.1rem;
   display: flex;
-  overflow: hidden;
-}
-.testimonials article {
-  opacity: 0;
-  transition: 0.5s ease;
-}
-.testimonials article.active {
-  opacity: 1;
+  overflow-x: hidden;
+  gap: 20px;
 }
 .testimonials article {
   min-width: 100%;
+  transition: 0.8s ease;
 }
 .testimonials blockquote::before {
   content: url(img/quotes-right.svg);
@@ -356,8 +351,10 @@ hr {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
 }
 .video-hero .overlay h2, .menu-video-hero .overlay h2, .menu-video-hero .overlay-menu h2 {
   margin-bottom: 0;
@@ -459,6 +456,11 @@ hr {
   .schedules table {
     margin: auto;
     width: auto;
+  }
+  .video-hero .overlay, .menu-video-hero .overlay, .menu-video-hero .overlay-menu {
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 1200px) {
