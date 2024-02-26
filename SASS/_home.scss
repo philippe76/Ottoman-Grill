@@ -62,14 +62,17 @@
 }
 
 .schedules {
-    opacity: 0;
     min-height: 100vh;
     text-align: center;
     padding: 3rem;
     background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgba(4, 4, 4, 1)),
     url(img/turkish-roofs.jpg) 50%;
+
     overflow: hidden;
 
+    > * {
+        transform: translateY(500px);
+    }
 
     .book-table {
         display: block;
@@ -86,7 +89,6 @@
 
     p + p {
         margin-top: 3.5rem;
-        // margin-right: 3rem;
     }
 
     p span {
@@ -123,8 +125,7 @@
 }
 
 .schedules.slideUp > * {
-    animation: slideUp 0.7s ease-in;
-    transition: opacity 0.7s ease-in;
+    animation: slideUp 0.7s ease-in forwards;
 }
 
 .schedules.slideUp p:last-of-type {

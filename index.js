@@ -10,8 +10,7 @@
 
                 if (entry.isIntersecting) {                    
 
-                    if (entry.target.classList.contains('shedules') ) {
-                        entry.target.style.opacity = 1;
+                    if (entry.target.classList.contains('schedules') ) {
                         entry.target.classList.add('slideUp')   
                     }
 
@@ -31,20 +30,6 @@
         // **************************************** //
         // ********  Testimonial slider  ********* //
         // **************************************** //
-
-        // const articles = document.querySelectorAll('.testimonials article');
-        // let artIndex = 0;
-
-        // function slide() {
-
-        //     articles[artIndex%articles.length].style.transform = "translateX(-100%)";
-        //     articles[artIndex%articles.length].classList.add('noOpacity');
-        //     articles[(artIndex+1)%articles.length].style.transform = "translateX(0)";
-        //     articles[artIndex%articles.length].classList.remove('noOpacity');
-        //     artIndex++;
-            
-        // }
-
 
         const slider = document.querySelector('.slider');
         const articles = document.querySelectorAll('.testimonials article');

@@ -56,9 +56,6 @@ img {
 }
 
 @keyframes slideUp {
-  from {
-    transform: translateY(200px);
-  }
   to {
     transform: translateY(0);
   }
@@ -246,12 +243,14 @@ hr {
 }
 
 .schedules {
-  opacity: 0;
   min-height: 100vh;
   text-align: center;
   padding: 3rem;
   background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgb(4, 4, 4)), url(img/turkish-roofs.jpg) 50%;
   overflow: hidden;
+}
+.schedules > * {
+  transform: translateY(500px);
 }
 .schedules .book-table {
   display: block;
@@ -296,8 +295,7 @@ hr {
 }
 
 .schedules.slideUp > * {
-  animation: slideUp 0.7s ease-in;
-  transition: opacity 0.7s ease-in;
+  animation: slideUp 0.7s ease-in forwards;
 }
 
 .schedules.slideUp p:last-of-type {

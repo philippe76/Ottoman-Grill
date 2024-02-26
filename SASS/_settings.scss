@@ -72,10 +72,11 @@ h2 {
 }
 
 @keyframes slideUp {
-    from {
-        transform: translateY(200px);
-    }
-    to {transform: translateY(0);
+    // from {
+    //     transform: translateY(200px);
+    // }
+    to {
+        transform: translateY(0);
     }
 }
 
