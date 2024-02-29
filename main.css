@@ -6,11 +6,15 @@
 }
 
 html {
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  padding: 0;
   background-color: #040404;
   color: #e5cfbd;
   font-family: "Open Sans", sans-serif;

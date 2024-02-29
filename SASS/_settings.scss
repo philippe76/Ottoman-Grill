@@ -16,11 +16,15 @@ $gradient-melted-overlay: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgba(4, 
 }
 
 html {
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
+    padding: 0;
     background-color: $main-bg-color;
     color: $main-color;
     font-family: 'Open Sans', sans-serif;
