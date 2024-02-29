@@ -35,7 +35,7 @@ img {
   height: auto;
 }
 
-.main-title, .schedules p span, .slide-caption, .menu-pics figcaption, .intro-menu .pic-gallery figure figcaption, h2 {
+.main-title, .schedules p span, .slide-caption, .menu-pics figcaption, .pic-gallery figure figcaption, h2 {
   font-size: 2.8rem;
   font-family: "Playfair Display", serif;
   color: #e5cfbd;
@@ -80,7 +80,7 @@ img {
     transform: translateX(0);
   }
 }
-.slide-caption, .menu-pics figcaption, .intro-menu .pic-gallery figure figcaption {
+.slide-caption, .menu-pics figcaption, .pic-gallery figure figcaption {
   position: absolute;
   opacity: 0;
   bottom: 0;
@@ -392,52 +392,50 @@ hr {
   animation: slideToLeft 0.7s ease-in;
 }
 
-.intro-menu article:first-of-type {
-  width: 75%;
+.intro-menu {
+  width: 85%;
   margin: 12rem auto 8rem;
 }
-.intro-menu article:first-of-type img {
-  float: left;
-  max-width: 50%;
-  margin-right: 6rem;
+.intro-menu img {
+  margin-right: 5rem;
   margin-bottom: 3rem;
-  -o-object-fit: contain;
-     object-fit: contain;
   filter: opacity(0.6);
 }
-.intro-menu article:first-of-type img + p {
+.intro-menu article {
+  text-align: center;
+}
+.intro-menu article p:first-of-type {
   color: #dca26b;
   letter-spacing: 5px;
 }
-.intro-menu article:first-of-type h2 {
+.intro-menu article h2 {
   text-transform: unset;
-  text-align: left;
   line-height: 1.1;
   margin: 1rem 0;
 }
-.intro-menu article:first-of-type .book-table {
-  clear: both;
+.intro-menu .book-table {
   display: block;
   width: 12rem;
-  margin: 0 auto;
+  margin: 2rem auto 0;
 }
-.intro-menu .pic-gallery {
+
+.pic-gallery {
   display: flex;
 }
-.intro-menu .pic-gallery figure {
+.pic-gallery figure {
   position: relative;
   margin: 0;
   width: 25vw;
   height: 17rem;
 }
-.intro-menu .pic-gallery figure img {
+.pic-gallery figure img {
   height: 17rem;
   -o-object-fit: cover;
      object-fit: cover;
   min-width: 100%;
   cursor: pointer;
 }
-.intro-menu .pic-gallery figure img:hover + figcaption, .intro-menu .pic-gallery figure figcaption:hover {
+.pic-gallery figure img:hover + figcaption, .pic-gallery figure figcaption:hover {
   opacity: 1;
   height: 100%;
 }
@@ -489,6 +487,25 @@ hr {
     flex-direction: row;
     justify-content: center;
     justify-content: space-around;
+  }
+  .intro-menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .intro-menu img {
+    max-width: 50%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin-bottom: 0;
+  }
+  .intro-menu article {
+    width: calc(50% - 5rem);
+  }
+  .intro-menu article P {
+    margin-top: 0;
+  }
+  .intro-menu .book-table {
+    margin-top: 4rem;
   }
 }
 @media screen and (min-width: 1200px) {

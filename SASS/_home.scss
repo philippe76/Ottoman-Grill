@@ -239,69 +239,66 @@
 
 .intro-menu {
 
-    article:first-of-type {
+    width: 85%;
+    margin: 12rem auto 8rem;
 
-        width: 75%;
-        margin: 12rem auto 8rem;
+    img {
+        margin-right: 5rem;
+        margin-bottom: 3rem;
+        filter: opacity(0.6);
+    }
     
-        img {
-            float: left;
-            max-width: 50%;
-            margin-right: 6rem;
-            margin-bottom: 3rem;
-            object-fit: contain;
-            filter: opacity(0.6);
-        }
-        
-        img + p {
+    article {
+
+        text-align: center;
+
+        p:first-of-type {
             color: $secondary-color;
             letter-spacing: 5px;
         }
         
         h2 {
             text-transform: unset;
-            text-align: left;
             line-height: 1.1;
             margin: 1rem 0;
-        }
-
-        .book-table {
-            clear: both;
-            display: block;
-            width: 12rem;
-            margin: 0 auto;
-        }
-
+        }        
     }
 
-    .pic-gallery {
+    .book-table {
+        display: block;
+        width: 12rem;
+        margin: 2rem auto 0;
+    }
+
+}
+
+.pic-gallery {
         
-        display: flex;
-        
-        figure {
-            position: relative;
-            margin: 0;
-            width: 25vw;
+    display: flex;
+    
+    figure {
+        position: relative;
+        margin: 0;
+        width: 25vw;
+        height: 17rem;
+
+        img {
             height: 17rem;
-
-            img {
-                height: 17rem;
-                object-fit: cover;
-                min-width: 100%;
-                cursor: pointer;
-            }
-
-            img:hover + figcaption, figcaption:hover {
-                opacity: 1;
-                height: 100%;
-            }
-            
-            figcaption {
-                @extend .slide-caption 
-            }
+            object-fit: cover;
+            min-width: 100%;
+            cursor: pointer;
         }
 
+        img:hover + figcaption, figcaption:hover {
+            opacity: 1;
+            height: 100%;
+        }
+        
+        figcaption {
+            @extend .slide-caption 
+        }
     }
+
 }
 
 .book-hero {
@@ -334,7 +331,6 @@
 @media screen and (min-width: 992px) {
 
     .schedules {
-
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -367,6 +363,32 @@
             justify-content: space-around;
         }
     }
+
+    .intro-menu {
+        display: flex;
+        flex-wrap: wrap;
+
+        img {
+            max-width: 50%;
+            object-fit: contain;
+            margin-bottom: 0;
+        }
+
+        article {
+            width: calc(50% - 5rem);
+
+            P {
+                margin-top: 0;
+            }
+        }
+
+        .book-table {
+            margin-top: 4rem;
+        }
+
+    }
+
+
 }
 
 @media screen and (min-width: 1200px) {
