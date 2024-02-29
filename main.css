@@ -443,11 +443,9 @@ hr {
 .book-hero {
   background: linear-gradient(to bottom right, rgba(11, 11, 11, 0.8), rgba(13, 13, 13, 0.8)), url(./img/restaurant-room.jpg) fixed no-repeat;
   background-size: cover;
-  height: 30rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  min-height: 30rem;
+  padding-bottom: 5rem;
+  display: none;
 }
 .book-hero article {
   width: 57%;
@@ -465,6 +463,12 @@ hr {
 @media screen and (min-width: 700px) {
   .pic-gallery figure {
     width: 50%;
+  }
+  .book-hero {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media screen and (min-width: 992px) {
