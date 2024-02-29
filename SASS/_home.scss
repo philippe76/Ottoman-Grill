@@ -275,11 +275,12 @@
 .pic-gallery {
         
     display: flex;
+    flex-wrap: wrap;
     
     figure {
         position: relative;
         margin: 0;
-        width: 25vw;
+        width: 100%;
         height: 17rem;
 
         img {
@@ -295,7 +296,7 @@
         }
         
         figcaption {
-            @extend .slide-caption 
+            @extend .slide-caption;
         }
     }
 
@@ -326,6 +327,14 @@
     }
 }
 
+
+@media screen and (min-width: 700px) {
+    .pic-gallery {
+        figure {
+            width: 50%;
+        }
+    }
+}
 
 
 @media screen and (min-width: 992px) {
@@ -388,6 +397,11 @@
 
     }
 
+    .pic-gallery {
+        figure {
+            width: 25%;
+        }
+    }
 
 }
 

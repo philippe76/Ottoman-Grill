@@ -421,11 +421,12 @@ hr {
 
 .pic-gallery {
   display: flex;
+  flex-wrap: wrap;
 }
 .pic-gallery figure {
   position: relative;
   margin: 0;
-  width: 25vw;
+  width: 100%;
   height: 17rem;
 }
 .pic-gallery figure img {
@@ -461,6 +462,11 @@ hr {
   margin-bottom: 3rem;
 }
 
+@media screen and (min-width: 700px) {
+  .pic-gallery figure {
+    width: 50%;
+  }
+}
 @media screen and (min-width: 992px) {
   .schedules {
     display: flex;
@@ -506,6 +512,9 @@ hr {
   }
   .intro-menu .book-table {
     margin-top: 4rem;
+  }
+  .pic-gallery figure {
+    width: 25%;
   }
 }
 @media screen and (min-width: 1200px) {
