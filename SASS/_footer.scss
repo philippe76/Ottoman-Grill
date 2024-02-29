@@ -1,11 +1,11 @@
 footer {
 
+    text-align: center;
+
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6em 10em 0;
-    padding-left: 8em;
+    flex-direction: column;
+    padding: 6em;
+    padding-bottom: 0;
     
     img[alt^="logo"] {
         width: 20rem;
@@ -17,7 +17,6 @@ footer {
     }
 
     .internal-links {
-        column-count: 2;
         
         li {
             padding: 0.8em 0.9em;
@@ -30,6 +29,8 @@ footer {
 
     address {
 
+        margin-top: 1rem;
+
         > a {
             display: block;
             margin: 0.5rem 0; 
@@ -37,11 +38,14 @@ footer {
         }
 
         .network-links {
+            margin-top: 3rem;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
 
             a {
                 font-size: 1.8rem;
+
+                margin: 0 1rem;
             }
             a:hover {
                 color: $secondary-color;
@@ -54,11 +58,7 @@ footer {
     }
     
     .copyright {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
         padding: 0 2rem;
-        margin-top: 5em;
         font-size: 0.9rem;
         color: $aside-color;
     }
@@ -68,6 +68,48 @@ hr {
     border: none;
     border-top: 1px solid rgba($main-color, 0.1);
     position: relative;
-    bottom: 5rem;
+    bottom: 6rem;
     width: 100%;
+}
+
+
+@media screen and (min-width: 700px) {
+
+    .internal-links {
+        column-count: 2;
+    }
+
+    .copyright {
+        margin-top: 2rem;
+    }
+
+    hr {
+        bottom: 8rem;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    
+    footer {
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2em;
+        margin-left: -1.5em;
+    }
+
+    .network-links {
+        justify-content: space-between;
+    }
+
+    .copyright {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5rem;
+    }
+
 }

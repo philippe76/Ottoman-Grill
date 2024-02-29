@@ -132,12 +132,11 @@ header .book-table {
   }
 }
 footer {
+  text-align: center;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6em 10em 0;
-  padding-left: 8em;
+  flex-direction: column;
+  padding: 6em;
+  padding-bottom: 0;
 }
 footer img[alt^=logo] {
   width: 20rem;
@@ -147,15 +146,14 @@ footer img[alt^=logo] {
 footer a {
   color: #757575;
 }
-footer .internal-links {
-  -moz-column-count: 2;
-       column-count: 2;
-}
 footer .internal-links li {
   padding: 0.8em 0.9em;
 }
 footer .internal-links li a:hover {
   color: #dca26b;
+}
+footer address {
+  margin-top: 1rem;
 }
 footer address > a {
   display: block;
@@ -163,11 +161,13 @@ footer address > a {
   font-style: initial;
 }
 footer address .network-links {
+  margin-top: 3rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 footer address .network-links a {
   font-size: 1.8rem;
+  margin: 0 1rem;
 }
 footer address .network-links a:hover {
   color: #dca26b;
@@ -176,11 +176,7 @@ footer address .network-links svg:hover path {
   fill: #dca26b;
 }
 footer .copyright {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
   padding: 0 2rem;
-  margin-top: 5em;
   font-size: 0.9rem;
   color: #757575;
 }
@@ -189,10 +185,42 @@ hr {
   border: none;
   border-top: 1px solid rgba(229, 207, 189, 0.1);
   position: relative;
-  bottom: 5rem;
+  bottom: 6rem;
   width: 100%;
 }
 
+@media screen and (min-width: 700px) {
+  .internal-links {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
+  .copyright {
+    margin-top: 2rem;
+  }
+  hr {
+    bottom: 8rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  footer {
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    margin-left: -1.5em;
+  }
+  .network-links {
+    justify-content: space-between;
+  }
+  .copyright {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+  }
+}
 .home-hero {
   max-width: 1400px;
   min-height: 100vh;
