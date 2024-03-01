@@ -95,14 +95,30 @@ img {
   transition: 0.6s ease-in-out;
 }
 
+.overlay, .menu-video-hero .overlay-menu {
+  background: linear-gradient(to right, rgba(16, 16, 16, 0.9), rgba(16, 16, 16, 0.9));
+  opacity: 0.7;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
 header {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  margin: 1rem 0;
+  padding: 1rem 0;
   background-color: #040404;
 }
 header img {
@@ -126,6 +142,12 @@ header .book-table {
   border-bottom: 1px solid rgba(229, 207, 189, 0.3);
 }
 
+@media screen and (min-width: 700px) {
+  header {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 @media screen and (min-width: 992px) {
   header .book-table {
     display: block;
@@ -390,21 +412,6 @@ hr {
   -o-object-position: center right;
      object-position: center right;
 }
-.video-hero .overlay, .menu-video-hero .overlay, .menu-video-hero .overlay-menu {
-  background: linear-gradient(to right, rgba(16, 16, 16, 0.9), rgba(16, 16, 16, 0.9));
-  opacity: 0.7;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  text-align: center;
-}
 .video-hero .overlay h2, .menu-video-hero .overlay h2, .menu-video-hero .overlay-menu h2 {
   margin-bottom: 0;
 }
@@ -653,7 +660,6 @@ section:has(.menu-title) li {
 
 .menu-video-hero {
   min-height: 100vh;
-  margin-top: -7rem;
 }
 .menu-video-hero video {
   display: none;
@@ -685,7 +691,6 @@ section:has(.menu-title) li {
 }
 
 .menu-hero {
-  margin-top: -3rem;
   text-align: center;
   background-color: #f7f8fb;
 }
@@ -720,7 +725,7 @@ section:has(.menu-title) li {
   transform: translate(-50%, -50%);
   margin: 0;
   color: #f7f8fb;
-  font-size: 6.5rem;
+  font-size: clamp(3rem, 7vw, 6.5rem);
   font-weight: 700;
   letter-spacing: -0.5px;
   text-shadow: 0px 0px 1px #585367;
