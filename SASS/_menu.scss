@@ -107,6 +107,11 @@ section:has(.menu-title) {
     opacity: 0.5;
 }
 
+main .slideUp {
+    transform: translateY(300px);
+    animation: slideUp 0.7s cubic-bezier(0, 0, 0.16, 0.97) forwards;
+}
+
 
 
 // ************************************* //

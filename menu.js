@@ -39,6 +39,38 @@
         }
 
 
+        // **************************************** //
+// ***  Starting animations on scroll  *** //
+// **************************************** //
+
+// Create observer
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        // when scrolling to observed elements
+        if (entry.isIntersecting) {                    
+  
+            // *** Menu Animation *** //
+            entry.target.classList.add('slideUp');
+            
+        }
+    })
+});
+
+// Choose elements to observe
+
+const menuDetails = document.querySelectorAll('main ul');
+
+menuDetails.forEach(item => {
+    observer.observe(item);
+})
+
+observer.observe(document.querySelector('.fish-pics'));
+observer.observe(document.querySelector('.fish-pics + .with-price'));
+
+
+
         
         // **************************************** //
         // *********  Toggle fish image  ********** //
