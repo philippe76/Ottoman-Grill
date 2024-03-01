@@ -2,7 +2,6 @@
 // ******* MENU GENERAL SETTINGS ****** //
 // ************************************* //
 
-// $down-masked : linear-gradient(#000 50%, transparent 0);
 
 .details {
     color: $aside-color;
@@ -110,12 +109,15 @@ section:has(.menu-title) {
 
 
 
-
 // ************************************* //
 // ************ HERO SECTION *********** //
 // ************************************* //
   
 .menu-video-hero {
+
+    video {
+        display: none;
+    }
 
     @extend.video-hero;
     min-height: 100vh;
@@ -129,10 +131,12 @@ section:has(.menu-title) {
         opacity: 1;
         justify-content: center;
         text-align: center;
-        padding: 0 22.5em;
+        // padding: 0 22.5em;
+        padding: 0 5em;
 
         h2, p, .book-table {
-            animation: slideUp 0.7s cubic-bezier(0, 0, 0.16, 0.97);
+            transform: translateY(500px);
+            animation: slideUp 0.7s cubic-bezier(0, 0, 0.16, 0.97) forwards;
         }
         
         h2 {
@@ -150,6 +154,7 @@ section:has(.menu-title) {
         }
     }
 }
+
 
 .menu-hero {
     margin-top: -3rem;
@@ -520,3 +525,25 @@ section:has(.menu-title) {
         }
     }
 } 
+
+
+@media screen and (min-width: 800px) {
+
+    .menu-video-hero {
+       
+        video {
+            display: block;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    .menu-video-hero {
+              
+        .overlay-menu {
+            padding: 0 22.5em;
+        }
+    }
+}

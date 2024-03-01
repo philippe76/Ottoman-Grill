@@ -655,16 +655,20 @@ section:has(.menu-title) li {
   min-height: 100vh;
   margin-top: -7rem;
 }
+.menu-video-hero video {
+  display: none;
+}
 .menu-video-hero .overlay-menu {
   background: linear-gradient(to top, rgba(16, 16, 16, 0.7), rgb(4, 4, 4));
   flex-direction: column;
   opacity: 1;
   justify-content: center;
   text-align: center;
-  padding: 0 22.5em;
+  padding: 0 5em;
 }
 .menu-video-hero .overlay-menu h2, .menu-video-hero .overlay-menu p, .menu-video-hero .overlay-menu .book-table {
-  animation: slideUp 0.7s cubic-bezier(0, 0, 0.16, 0.97);
+  transform: translateY(500px);
+  animation: slideUp 0.7s cubic-bezier(0, 0, 0.16, 0.97) forwards;
 }
 .menu-video-hero .overlay-menu h2 {
   text-transform: unset;
@@ -959,4 +963,15 @@ section:has(.menu-title) li {
 }
 #desserts .menu-card li .details, #desserts .menu-card li #entries .entries-list dd, #entries .entries-list #desserts .menu-card li dd {
   margin-top: -0.8rem;
+}
+
+@media screen and (min-width: 800px) {
+  .menu-video-hero video {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-video-hero .overlay-menu {
+    padding: 0 22.5em;
+  }
 }/*# sourceMappingURL=main.css.map */
