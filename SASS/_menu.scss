@@ -211,15 +211,9 @@ section:has(.menu-title) {
 .menu-pics {
     clear: both;
     max-width: 1300px;
-    height: 400px;
+    height: 350px;
     margin: 0 auto;
-    display: flex;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.486);
-
-    // ZOOM ON HOVERED PIC
-    &:has(figure:hover) figure:not(:hover) {
-        width: 29%;
-    }
 
     img {
         width: 100%;
@@ -234,25 +228,40 @@ section:has(.menu-title) {
         height: 100%;
     }
 
+
+    // ZOOM HEIGHT ON HOVERED PIC
+    &:has(figure:hover) figure:not(:hover) {
+        height: 29%;
+    }
+        
     figure {
+        height: calc(100% / 3);            
         position: relative;
         margin: 0;
-        width: calc(100% / 3);
         cursor: pointer;
         transition: 1s ease;
 
         &:hover {
-            width: 50%;
-        }
+            height: 50%;
+        } 
         
     }            
     
     figcaption {
         @extend .slide-caption;
+        font-size: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        p {
+            margin-top: 0;
+        }
+
+        .book-table {
+            padding: 0.3em 1em;
+        }
     }
 
 }
@@ -532,6 +541,33 @@ section:has(.menu-title) {
             display: block;
         }
     }
+
+    .menu-pics {
+        height: 400px;
+        display: flex;
+
+        // ZOOM WIDTH ON HOVERED PIC
+        &:has(figure:hover) figure:not(:hover) {
+            width: 29%;
+            height: auto;
+        } 
+
+        figure {
+            width: calc(100% / 3);
+            height: auto;
+    
+            &:hover {
+                width: 50%;
+                height: auto;
+            }  
+
+            figcaption .book-table {
+                padding: 0.8em 1.3em;
+            }
+                   
+        }
+    }
+
 }
 
 
