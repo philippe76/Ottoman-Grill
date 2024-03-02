@@ -815,8 +815,8 @@ main .slideUp {
 
 .fish .fish-pics {
   position: relative;
-  height: 25rem;
-  width: 36rem;
+  height: 20rem;
+  width: 31rem;
   margin: 0 auto;
 }
 .fish .fish-pics img:first-child {
@@ -827,7 +827,7 @@ main .slideUp {
 .fish .fish-pics::before {
   content: "";
   position: absolute;
-  top: 48%;
+  top: 50%;
   left: 0;
   transform: translateY(-50%);
   width: 100%;
@@ -837,7 +837,7 @@ main .slideUp {
 }
 .fish .fish-pics .fa-caret-up, .fish .fish-pics .fa-caret-down {
   position: absolute;
-  top: 48%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -100%);
   width: 3rem;
@@ -942,6 +942,13 @@ main .slideUp {
   }
   .menu-pics figure figcaption .book-table {
     padding: 0.8em 1.3em;
+  }
+  .fish .fish-pics {
+    height: 25rem;
+    width: 36rem;
+  }
+  .fish .fish-pics::before, .fish .fish-pics .fa-caret-up, .fish .fish-pics .fa-caret-down {
+    top: 48%;
   }
 }
 @media screen and (min-width: 992px) {

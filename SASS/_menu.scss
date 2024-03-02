@@ -331,8 +331,10 @@ main .slideUp {
 
     .fish-pics {
         position: relative;
-        height: 25rem;
-        width: 36rem;
+        // height: 25rem;
+        // width: 36rem;
+        height: 20rem;
+        width: 31rem;
         margin: 0 auto;
 
         // cut image half down
@@ -345,7 +347,7 @@ main .slideUp {
         &::before {
             content: '';
             position: absolute;
-            top: 48%;
+            top: 50%;
             left: 0;
             transform: translateY(-50%);
             width: 100%;
@@ -357,7 +359,7 @@ main .slideUp {
         // top-arrow icon
         .fa-caret-up, .fa-caret-down {
             position: absolute;
-            top: 48%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -100%);
 
@@ -491,6 +493,16 @@ main .slideUp {
             }
                    
         }
+    }
+
+    .fish .fish-pics {
+        height: 25rem;
+        width: 36rem;
+
+        &::before, .fa-caret-up, .fa-caret-down {
+            top: 48%;
+        }
+
     }
 
 }
