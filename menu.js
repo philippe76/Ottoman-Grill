@@ -127,3 +127,4 @@ observer.observe(document.querySelector('.fish-pics + .with-price'));
         // **************************************** //
         
         document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear());
+

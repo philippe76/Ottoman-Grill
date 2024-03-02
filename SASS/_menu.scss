@@ -2,6 +2,12 @@
 // ******* MENU GENERAL SETTINGS ****** //
 // ************************************* //
 
+:root {
+    --top : 50%;
+}
+
+$top: var(--top);
+
 
 .details {
     color: $aside-color;
@@ -93,14 +99,7 @@
 }
 
 section:has(.menu-title) {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    li {
-        float: left;
-        clear: both;
-        width: 50%;
-    }
+    margin: 0 2rem;
 }
 
 .noOpacity {
@@ -278,8 +277,7 @@ main .slideUp {
 
 #entries {
 
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 2rem;
 
     h3 {
         font-weight: unset;
@@ -304,16 +302,7 @@ main .slideUp {
             @extend .details;
         }
     }
-
-    // SECOND COLUMN
-    li:last-of-type {
-        float: right;
-        width: calc(50% - 4rem);
-        margin-left: 4rem;
-        margin-top: -39rem;
-    }
-
-    
+ 
 }
 
 // H2 AFTER ENTRIES MENU
@@ -335,72 +324,6 @@ main .slideUp {
         margin-bottom: 0;
     }
 
-    // SECOND COLUMN
-    li:nth-child(2) ~ li {
-        float: right;
-        // clear: both;
-        width: calc(50% - 4rem);
-        margin-left: 4rem;
-    }
-
-    li:nth-child(3) {
-        margin-top: -23rem;
-    }
-    li:nth-child(4) {
-        margin-top: -17rem;
-    }
-    li:last-of-type {
-        margin-top: -7rem;
-    }
-
-
-}
-
-
-.grills, .traditionnal {
-
-    // SECOND COLUMN
-    li:nth-child(3) ~ li {
-        float: right;
-        width: calc(50% - 4rem);
-        margin-left: 4rem;
-    }
-
-    li:nth-child(4) {
-        margin-top: -17rem;
-    }
-    li:nth-child(5) {
-        margin-top: -11rem;
-    }
-    li:nth-child(6) {
-        margin-top: -5rem;
-    }
-    li:nth-child(7) {
-        clear: both;
-    }
-}
-
-.steaks {
-
-    // SECOND COLUMN
-    li:nth-child(4) ~ li {
-        float: right;
-        width: calc(50% - 4rem);
-        margin-left: 4rem;
-    }
-
-    li:nth-child(5) {
-        margin-top: -25rem;
-    }
-    li:nth-child(6) {
-        margin-top: -19rem;
-    }
-    li:nth-child(7) {
-        margin-top: -13rem;
-    }
-    li:nth-child(8) {
-        margin-top: -5rem;
-    }
 }
 
 
@@ -409,24 +332,20 @@ main .slideUp {
     .fish-pics {
         position: relative;
         height: 25rem;
-        float: left;
-        width: 50%;
-        margin-right: 3rem;
+        width: 36rem;
+        margin: 0 auto;
 
+        // cut image half down
         img:first-child {
             position: absolute;
             mask-image: linear-gradient(#000 50%, transparent 0);
         }
-        // img:last-child {
-        //     position: absolute;
-        //     mask-image: linear-gradient(transparent 50%, #000 0);
-        // }
 
         // white line between pics
         &::before {
             content: '';
             position: absolute;
-            top: 50%;
+            top: 48%;
             left: 0;
             transform: translateY(-50%);
             width: 100%;
@@ -438,7 +357,7 @@ main .slideUp {
         // top-arrow icon
         .fa-caret-up, .fa-caret-down {
             position: absolute;
-            top: 50%;
+            top: 48%;
             left: 50%;
             transform: translate(-50%, -100%);
 
@@ -466,6 +385,7 @@ main .slideUp {
         }
 
     }
+
     .with-price {
         clear: unset;
         margin-top: 12rem;
@@ -575,6 +495,103 @@ main .slideUp {
 
 }
 
+@media screen and (min-width: 992px) {
+    
+
+    section:has(.menu-title) {
+        margin: 0 4rem;
+    
+        li {
+            float: left;
+            clear: both;
+            width: 50%;
+        }
+    }
+
+    #entries {
+        margin: 0 4rem;
+          
+        // SECOND COLUMN
+        li:last-of-type {
+            float: right;
+            width: calc(50% - 4rem);
+            margin-left: 4rem;
+            margin-top: -39rem;
+        }
+
+    }
+
+    .meats {
+        // SECOND COLUMN
+        li:nth-child(2) ~ li {
+            float: right;
+            width: calc(50% - 4rem);
+            margin-left: 4rem;
+        }
+
+        li:nth-child(3) {
+            margin-top: -23rem;
+        }
+        li:nth-child(4) {
+            margin-top: -17rem;
+        }
+        li:last-of-type {
+            margin-top: -7rem;
+        }
+    }
+
+    .grills, .traditionnal {
+
+        // SECOND COLUMN
+        li:nth-child(3) ~ li {
+            float: right;
+            width: calc(50% - 4rem);
+            margin-left: 4rem;
+        }
+    
+        li:nth-child(4) {
+            margin-top: -17rem;
+        }
+        li:nth-child(5) {
+            margin-top: -11rem;
+        }
+        li:nth-child(6) {
+            margin-top: -5rem;
+        }
+        li:nth-child(7) {
+            clear: both;
+        }
+    }
+
+    .steaks {
+
+        // SECOND COLUMN
+        li:nth-child(4) ~ li {
+            float: right;
+            width: calc(50% - 4rem);
+            margin-left: 4rem;
+        }
+    
+        li:nth-child(5) {
+            margin-top: -25rem;
+        }
+        li:nth-child(6) {
+            margin-top: -19rem;
+        }
+        li:nth-child(7) {
+            margin-top: -13rem;
+        }
+        li:nth-child(8) {
+            margin-top: -5rem;
+        }
+    }
+
+    .fish .fish-pics {
+        float: left;
+        margin-right: 3rem;
+    }
+
+}
 
 @media screen and (min-width: 1200px) {
 
