@@ -568,7 +568,7 @@ hr {
     width: calc(30% - 2rem);
   }
 }
-.details, #entries .entries-list dd {
+.details, .menu-card ul li ul li, #entries .entries-list dd {
   color: #757575;
   font-style: italic;
   font-size: 0.9rem;
@@ -943,6 +943,19 @@ main .slideUp {
 .menu-card ul {
   margin-top: 8rem;
 }
+.menu-card ul li {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: #e5cfbd;
+}
+.menu-card ul li ul {
+  margin-top: 0;
+  padding-left: 1rem;
+}
+.menu-card ul li ul li::before {
+  content: "-";
+  margin-right: 0.5rem;
+}
 
 #desserts {
   height: 85vh;
@@ -960,7 +973,7 @@ main .slideUp {
   margin: 0;
   margin-bottom: 0.5rem;
 }
-#desserts .menu-card li .details, #desserts .menu-card li #entries .entries-list dd, #entries .entries-list #desserts .menu-card li dd {
+#desserts .menu-card li .details, #desserts .menu-card li #entries .entries-list dd, #entries .entries-list #desserts .menu-card li dd, #desserts .menu-card ul li ul li {
   margin-top: -0.8rem;
 }
 

@@ -468,6 +468,26 @@ main .slideUp {
 
     ul {
         margin-top: 8rem;
+
+        li {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: $main-color;
+
+            ul {
+                margin-top: 0;
+                padding-left: 1rem;
+                li {
+                    @extend .details;
+                    
+                    &::before {
+                        content: '-';
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+
+        }
     }
 }
 
