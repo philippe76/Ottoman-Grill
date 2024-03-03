@@ -568,10 +568,6 @@ hr {
     width: calc(30% - 2rem);
   }
 }
-:root {
-  --top: 50%;
-}
-
 .details, #entries .entries-list dd {
   color: #757575;
   font-style: italic;
@@ -900,13 +896,16 @@ main .slideUp {
   margin-bottom: 0;
 }
 
-.menu-card-pics {
+.menu-card {
+  margin: 0 2rem;
+}
+.menu-card .menu-card-pics {
   display: flex;
   justify-content: center;
   position: relative;
   margin: 2rem 0;
 }
-.menu-card-pics img {
+.menu-card .menu-card-pics img {
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
@@ -919,24 +918,30 @@ main .slideUp {
   top: 0;
   transition: 0.5s ease;
 }
-.menu-card-pics img:nth-child(1) {
+.menu-card .menu-card-pics img:nth-child(1) {
   left: calc(30% + 5.2rem);
 }
-.menu-card-pics img:nth-child(2) {
+.menu-card .menu-card-pics img:nth-child(2) {
   left: calc(30% + 10.4rem);
 }
-.menu-card-pics img:nth-child(3) {
+.menu-card .menu-card-pics img:nth-child(3) {
   left: calc(30% + 15.6rem);
 }
-.menu-card-pics img:nth-child(4) {
+.menu-card .menu-card-pics img:nth-child(4) {
   left: calc(30% + 20.8rem);
 }
-.menu-card-pics img:nth-child(5) {
+.menu-card .menu-card-pics img:nth-child(5) {
   left: calc(30% + 26rem);
 }
-.menu-card-pics:hover img {
+.menu-card .menu-card-pics:hover img {
   position: static;
   margin-right: 0.8rem;
+}
+.menu-card .menu-card-pics:hover + ul {
+  margin-top: -1rem;
+}
+.menu-card ul {
+  margin-top: 8rem;
 }
 
 #desserts {

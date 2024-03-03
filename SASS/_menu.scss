@@ -2,12 +2,6 @@
 // ******* MENU GENERAL SETTINGS ****** //
 // ************************************* //
 
-:root {
-    --top : 50%;
-}
-
-$top: var(--top);
-
 
 .details {
     color: $aside-color;
@@ -432,37 +426,49 @@ main .slideUp {
     }
 }
 
-.menu-card-pics {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin: 2rem 0;
 
-    img {
-        width: 7rem;
-        height: 7rem;
-        border-radius: 50%;
-        border: 4px solid #fff;
-        object-fit: cover;
-        object-position: center center;
-        position: absolute;
-        top: 0;
-        transition: 0.5s ease;
-    }
+.menu-card {
 
-    // push each image to right
-    @for $i from 1 through 5 {
-        img:nth-child(#{$i}) {
-            left: calc(30% + $i * 5.2rem);
+    margin: 0 2rem;
+
+    .menu-card-pics {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 2rem 0;
+    
+        img {
+            width: 7rem;
+            height: 7rem;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            object-fit: cover;
+            object-position: center center;
+            position: absolute;
+            top: 0;
+            transition: 0.5s ease;
+        }
+    
+        // push each image to right to overlap each by each 
+        @for $i from 1 through 5 {
+            img:nth-child(#{$i}) {
+                left: calc(30% + $i * 5.2rem);
+            }
+        }
+    
+        // remove overlapping on hover
+        &:hover img{
+            position: static;
+            margin-right: 0.8rem;
+        }  
+        &:hover + ul {
+            margin-top: -1rem;
         }
     }
 
-    &:hover img{
-        position: static;
-        margin-right: 0.8rem;
+    ul {
+        margin-top: 8rem;
     }
-
-
 }
 
 #desserts {
