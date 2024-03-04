@@ -921,33 +921,28 @@ main .slideUp {
 }
 .menu-flyer .menu-flyer-pics img:nth-child(1) {
   left: calc(10% + 5rem);
-  left: 3.3rem;
 }
 .menu-flyer .menu-flyer-pics img:nth-child(2) {
   left: calc(10% + 10rem);
-  left: 6.6rem;
 }
 .menu-flyer .menu-flyer-pics img:nth-child(3) {
   left: calc(10% + 15rem);
-  left: 9.9rem;
 }
 .menu-flyer .menu-flyer-pics img:nth-child(4) {
   left: calc(10% + 20rem);
-  left: 13.2rem;
 }
 .menu-flyer .menu-flyer-pics img:nth-child(5) {
   left: calc(10% + 25rem);
-  left: 16.5rem;
 }
 .menu-flyer .menu-flyer-pics:hover img {
   position: static;
   margin-right: 0.8rem;
 }
 .menu-flyer .menu-flyer-pics:hover + ul {
-  margin-top: -1rem;
+  margin-top: 0.2rem;
 }
 .menu-flyer ul {
-  margin-top: 8rem;
+  margin-top: 12rem;
 }
 .menu-flyer ul li {
   font-family: "Playfair Display", serif;
@@ -1099,6 +1094,28 @@ main .slideUp {
   .menu-flyer .menu-flyer-pics img {
     width: 5.5rem;
     height: 5.5rem;
+  }
+  .menu-flyer .menu-flyer-pics:hover img {
+    position: static;
+    margin: 0 0.6rem;
+  }
+  .menu-flyer .menu-flyer-pics:hover + ul {
+    margin-top: 3.5rem;
+  }
+  .menu-flyer .menu-flyer-pics img:nth-child(1) {
+    left: 5rem;
+  }
+  .menu-flyer .menu-flyer-pics img:nth-child(2) {
+    left: 10rem;
+  }
+  .menu-flyer .menu-flyer-pics img:nth-child(3) {
+    left: 15rem;
+  }
+  .menu-flyer .menu-flyer-pics img:nth-child(4) {
+    left: 20rem;
+  }
+  .menu-flyer .menu-flyer-pics img:nth-child(5) {
+    left: 25rem;
   }
 }
 @media screen and (min-width: 1200px) {

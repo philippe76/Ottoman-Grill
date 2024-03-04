@@ -456,23 +456,22 @@ main .slideUp {
         @for $i from 1 through 5 {
             img:nth-child(#{$i}) {
                 left: calc(10% + $i * 5rem);
-                left: calc($i * 3.3rem);
             }
         }
     
         // remove overlapping on hover
         &:hover img{
             position: static;
-            margin-right: 0.8rem;
-            
+            margin-right: 0.8rem;            
         }  
+
         &:hover + ul {
-            margin-top: -1rem;
+            margin-top: 0.2rem;
         }
     }
 
     ul {
-        margin-top: 8rem;
+        margin-top: 12rem;
 
         li {
             font-family: 'Playfair Display', serif;
@@ -682,9 +681,27 @@ main .slideUp {
             width: calc(50% - 4rem);
         }
 
-        .menu-flyer-pics img {
-            width: 5.5rem;
-            height: 5.5rem;
+        .menu-flyer-pics {
+
+            img {
+                width: 5.5rem;
+                height: 5.5rem;
+            }
+
+            &:hover img{
+                position: static;
+                margin: 0 0.6rem;            
+            }  
+
+            &:hover + ul {
+                margin-top: 3.5rem;
+            }
+
+            @for $i from 1 through 5 {
+                img:nth-child(#{$i}) {
+                    left: calc($i * 5rem);
+                }
+            }
         }
     }
 
