@@ -568,7 +568,7 @@ hr {
     width: calc(30% - 2rem);
   }
 }
-.details, .menu-card ul li ul li, #entries .entries-list dd {
+.details, .menu-flyer ul li ul li, #entries .entries-list dd {
   color: #757575;
   font-style: italic;
   font-size: 0.9rem;
@@ -862,13 +862,14 @@ main .slideUp {
 
 .menu-extra {
   clear: both;
-  height: 80vh;
+  height: 28rem;
   margin-top: 10rem !important;
   background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgb(4, 4, 4)), url(img/pide-stone-oven.jpg) center;
   background-attachment: fixed;
 }
 .menu-extra .menu-title {
   padding-top: 0;
+  margin-bottom: 0.5rem;
 }
 .menu-extra .menu-title h2 {
   color: #dca26b;
@@ -876,13 +877,14 @@ main .slideUp {
   margin: 0;
 }
 .menu-extra .menu-card {
-  width: 45%;
+  width: 100%;
   height: 100%;
   padding: 1.8em 1.3em;
   background-color: #e5cfbd;
   color: #000;
   font-family: "Playfair Display", serif;
   font-size: 1.2rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   font-weight: 500;
   letter-spacing: 0.5px;
 }
@@ -892,20 +894,21 @@ main .slideUp {
   justify-content: space-between;
   align-items: center;
 }
-.menu-extra .menu-card li:last-of-type p {
+.menu-extra .menu-card li li p {
   margin-bottom: 0;
 }
 
-.menu-card {
+.menu-flyer {
   margin: 0 2rem;
 }
-.menu-card .menu-card-pics {
+.menu-flyer .menu-flyer-pics {
+  width: 80%;
   display: flex;
   justify-content: center;
   position: relative;
-  margin: 2rem 0;
+  margin: 2rem auto;
 }
-.menu-card .menu-card-pics img {
+.menu-flyer .menu-flyer-pics img {
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
@@ -918,53 +921,50 @@ main .slideUp {
   top: 0;
   transition: 0.5s ease;
 }
-.menu-card .menu-card-pics img:nth-child(1) {
-  left: calc(30% + 5.2rem);
+.menu-flyer .menu-flyer-pics img:nth-child(1) {
+  left: calc(10% + 5rem);
 }
-.menu-card .menu-card-pics img:nth-child(2) {
-  left: calc(30% + 10.4rem);
+.menu-flyer .menu-flyer-pics img:nth-child(2) {
+  left: calc(10% + 10rem);
 }
-.menu-card .menu-card-pics img:nth-child(3) {
-  left: calc(30% + 15.6rem);
+.menu-flyer .menu-flyer-pics img:nth-child(3) {
+  left: calc(10% + 15rem);
 }
-.menu-card .menu-card-pics img:nth-child(4) {
-  left: calc(30% + 20.8rem);
+.menu-flyer .menu-flyer-pics img:nth-child(4) {
+  left: calc(10% + 20rem);
 }
-.menu-card .menu-card-pics img:nth-child(5) {
-  left: calc(30% + 26rem);
+.menu-flyer .menu-flyer-pics img:nth-child(5) {
+  left: calc(10% + 25rem);
 }
-.menu-card .menu-card-pics:hover img {
+.menu-flyer .menu-flyer-pics:hover img {
   position: static;
   margin-right: 0.8rem;
 }
-.menu-card .menu-card-pics:hover + ul {
+.menu-flyer .menu-flyer-pics:hover + ul {
   margin-top: -1rem;
 }
-.menu-card ul {
+.menu-flyer ul {
   margin-top: 8rem;
 }
-.menu-card ul li {
+.menu-flyer ul li {
   font-family: "Playfair Display", serif;
   font-size: 1.4rem;
   color: #e5cfbd;
 }
-.menu-card ul li ul {
+.menu-flyer ul li ul {
   margin-top: 0;
   padding-left: 1rem;
 }
-.menu-card ul li ul li::before {
+.menu-flyer ul li ul li::before {
   content: "-";
   margin-right: 0.5rem;
 }
 
 #desserts {
-  height: 85vh;
+  height: 37rem;
   background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgb(4, 4, 4)), url(img/turkish-tea.jpg) no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
-#desserts .menu-title {
-  margin-bottom: 1.5rem;
 }
 #desserts .menu-card {
   float: right;
@@ -973,7 +973,7 @@ main .slideUp {
   margin: 0;
   margin-bottom: 0.5rem;
 }
-#desserts .menu-card li .details, #desserts .menu-card li #entries .entries-list dd, #entries .entries-list #desserts .menu-card li dd, #desserts .menu-card ul li ul li {
+#desserts .menu-card li .details, #desserts .menu-card li #entries .entries-list dd, #entries .entries-list #desserts .menu-card li dd, #desserts .menu-card .menu-flyer ul li ul li, .menu-flyer ul #desserts .menu-card li ul li {
   margin-top: -0.8rem;
 }
 
@@ -1080,6 +1080,9 @@ main .slideUp {
   }
   .fish .with-price {
     margin-top: 12rem;
+  }
+  .menu-extra .menu-card {
+    width: 50%;
   }
 }
 @media screen and (min-width: 1200px) {

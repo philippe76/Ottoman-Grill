@@ -389,12 +389,14 @@ main .slideUp {
 
 .menu-extra {
     clear: both;
-    height: 80vh;
+    height: 28rem;
     margin-top: 10rem !important;   // OVER WRITTEN
     background: $gradient-melted-overlay, url(img/pide-stone-oven.jpg) center;
     background-attachment: fixed;
+
     .menu-title {
         padding-top: 0;
+        margin-bottom: 0.5rem;
 
         h2 {
             color: $secondary-color;
@@ -403,13 +405,14 @@ main .slideUp {
         }
     }
     .menu-card {
-        width: 45%;
+        width: 100%;
         height: 100%;
         padding: 1.8em 1.3em;
         background-color: $main-color;
         color: #000;
         font-family: 'Playfair Display', serif;
         font-size: 1.2rem;
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
         font-weight: 500;
         letter-spacing: 0.5px;
 
@@ -418,24 +421,26 @@ main .slideUp {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            li p {
+                margin-bottom: 0;
+            }
         }
 
-        li:last-of-type p {
-            margin-bottom: 0;
-        }
     }
 }
 
 
-.menu-card {
+.menu-flyer {
 
     margin: 0 2rem;
-
-    .menu-card-pics {
+   
+    .menu-flyer-pics {
+        width: 80%;
         display: flex;
         justify-content: center;
         position: relative;
-        margin: 2rem 0;
+        margin: 2rem auto;
     
         img {
             width: 7rem;
@@ -452,7 +457,7 @@ main .slideUp {
         // push each image to right to overlap each by each 
         @for $i from 1 through 5 {
             img:nth-child(#{$i}) {
-                left: calc(30% + $i * 5.2rem);
+                left: calc(10% + $i * 5rem);
             }
         }
     
@@ -492,14 +497,10 @@ main .slideUp {
 }
 
 #desserts {
-    height: 85vh;
+    height: 37rem;
     background: $gradient-melted-overlay, url(img/turkish-tea.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
-    .menu-title {
-        margin-bottom: 1.5rem;
-    }
 
     .menu-card {
         float: right;
@@ -665,6 +666,12 @@ main .slideUp {
         }
     }
 
+    .menu-extra {
+        .menu-card {
+            width: 50%;
+        }
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -676,3 +683,5 @@ main .slideUp {
         }
     }
 }
+
+

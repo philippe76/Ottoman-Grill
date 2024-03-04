@@ -1,45 +1,49 @@
-        // datas for brightness change
-        let scrollPosition = [];
-        let brightness = 55;
+// datas for brightness change
+let scrollPosition = [];
+let brightness = 55;
+
+// **************************************** //
+// ** Change section brightness on scroll ** //
+// **************************************** //
+
+// if (window.scrollY > 1940)  {
+
+//     scrollPosition.splice(1); // delete too old position
+//     scrollPosition.unshift(Math.round(window.scrollY)); // Add new position
+
+//     // if scrolling down
+//     if(scrollPosition[0] > scrollPosition[1]){
+//         document.getElementById('desserts').style.filter = `brightness(${brightness+=3.5}%)`
+//     } 
+//     //  if scrolling up
+//     else{
+//         document.getElementById('desserts').style.filter = `brightness(${brightness-=3.5}%)`
+//     }
+// }
+// else {
+//     brightness = 55;
+// }
 
 
-        window.onscroll = function() {
-
-            // **************************************** //
-           // ***** Add header border on scroll ****** //
-          // **************************************** //
-            if (window.scrollY > 0){  
-                document.querySelector('header').classList.add("header-border");
-            }
-            else {
-                document.querySelector('header').classList.remove("header-border");
-            }
-
-            // **************************************** //
-           // ** Change section brightness on scroll ** //
-           // **************************************** //
-
-            // if (window.scrollY > 1940)  {
-
-            //     scrollPosition.splice(1); // delete too old position
-            //     scrollPosition.unshift(Math.round(window.scrollY)); // Add new position
-
-            //     // if scrolling down
-            //     if(scrollPosition[0] > scrollPosition[1]){
-            //         document.getElementById('desserts').style.filter = `brightness(${brightness+=3.5}%)`
-            //     } 
-            //     //  if scrolling up
-            //     else{
-            //         document.getElementById('desserts').style.filter = `brightness(${brightness-=3.5}%)`
-            //     }
-            // }
-            // else {
-            //     brightness = 55;
-            // }
-        }
 
 
-        // **************************************** //
+
+// **************************************** //
+// ***** Add header border on scroll ****** //
+// **************************************** //
+
+window.onscroll = function() {
+
+    if (window.scrollY > 0){  
+        document.querySelector('header').classList.add("header-border");
+    }
+    else {
+        document.querySelector('header').classList.remove("header-border");
+    }
+}
+
+
+// **************************************** //
 // ***  Starting animations on scroll  *** //
 // **************************************** //
 
@@ -60,9 +64,10 @@ const observer = new IntersectionObserver(entries => {
 
 // Choose elements to observe
 
-const menuDetails = document.querySelectorAll('main ul');
+const menuDetails = document.querySelectorAll('main ul:not(.menu-card ul)');
 
 menuDetails.forEach(item => {
+    console.log(item);
     observer.observe(item);
 })
 
@@ -72,59 +77,59 @@ observer.observe(document.querySelector('.fish-pics + .with-price'));
 
 
         
-        // **************************************** //
-        // *********  Toggle fish image  ********** //
-        // **************************************** //
+// **************************************** //
+// *********  Toggle fish image  ********** //
+// **************************************** //
 
-        let displayedFish = 'half';
-              
-        let toggleButtons = document.querySelectorAll('.fish-pics img + i');
+let displayedFish = 'half';
         
-        toggleButtons.forEach(btn => btn.onclick = () => toggleFish(btn.dataset.fish, btn.dataset.toggle))
+let toggleButtons = document.querySelectorAll('.fish-pics img + i');
+
+toggleButtons.forEach(btn => btn.onclick = () => toggleFish(btn.dataset.fish, btn.dataset.toggle))
+
+function toggleFish(fishName, caret) {
+
+    if (displayedFish === 'half') {   
+        // display down of raw
+        document.querySelector(`img[src*="raw-fish"]`).style.maskImage = "unset";
+
+        // mask top of raw for cooked displaying
+        document.querySelector('img[src*="raw-fish"]').style.display = fishName !== 'cooked' ? 'block' : 'none';
         
-        function toggleFish(fishName, caret) {
+        // disable toggle caret
+        document.querySelector(`[data-fish="${fishName}"]`).classList.add('noOpacity');
 
-            if (displayedFish === 'half') {   
-                // display down of raw
-                document.querySelector(`img[src*="raw-fish"]`).style.maskImage = "unset";
+        // update fish variable
+        displayedFish = fishName;    
+    }
 
-                // mask top of raw for cooked displaying
-                document.querySelector('img[src*="raw-fish"]').style.display = fishName !== 'cooked' ? 'block' : 'none';
-                
-                // disable toggle caret
-                document.querySelector(`[data-fish="${fishName}"]`).classList.add('noOpacity');
-
-                // update fish variable
-                displayedFish = fishName;    
-            }
-
-            else {
-                
-                // get all carets back
-                document.querySelector(`[data-toggle="down"]`).classList.remove('noOpacity');
-                document.querySelector(`[data-toggle="up"]`).classList.remove('noOpacity');               
-
-                // mask down of raw
-                document.querySelector('img[src*="raw-fish"]').style.maskImage = 'linear-gradient(#000 50%, transparent 0)';
-
-
-                if (displayedFish === 'cooked' && caret === 'down') {
-
-                    // display top of raw
-                    document.querySelector('img[src*="raw-fish"]').style.display = 'block'; 
-                }
-
-                // update fish variable
-                displayedFish = 'half';  
-            }
-
-        }      
+    else {
         
-        
-        
-        // **************************************** //
-        // ********  Footer dynamic year  ********* //
-        // **************************************** //
-        
-        document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear());
+        // get all carets back
+        document.querySelector(`[data-toggle="down"]`).classList.remove('noOpacity');
+        document.querySelector(`[data-toggle="up"]`).classList.remove('noOpacity');               
+
+        // mask down of raw
+        document.querySelector('img[src*="raw-fish"]').style.maskImage = 'linear-gradient(#000 50%, transparent 0)';
+
+
+        if (displayedFish === 'cooked' && caret === 'down') {
+
+            // display top of raw
+            document.querySelector('img[src*="raw-fish"]').style.display = 'block'; 
+        }
+
+        // update fish variable
+        displayedFish = 'half';  
+    }
+
+}      
+
+
+
+// **************************************** //
+// ********  Footer dynamic year  ********* //
+// **************************************** //
+
+document.querySelectorAll('.footerDate').forEach(item => item.textContent = new Date().getFullYear());
 
