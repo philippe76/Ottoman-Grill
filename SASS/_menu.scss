@@ -433,16 +433,14 @@ main .slideUp {
 
 .menu-flyer {
 
-    margin: 0 2rem;
-   
+    margin: 0 3rem;
+
     .menu-flyer-pics {
-        width: 80%;
-        display: flex;
-        justify-content: center;
         position: relative;
         margin: 2rem auto;
     
         img {
+            display: inline-block;
             width: 7rem;
             height: 7rem;
             border-radius: 50%;
@@ -458,6 +456,7 @@ main .slideUp {
         @for $i from 1 through 5 {
             img:nth-child(#{$i}) {
                 left: calc(10% + $i * 5rem);
+                left: calc($i * 3.3rem);
             }
         }
     
@@ -465,6 +464,7 @@ main .slideUp {
         &:hover img{
             position: static;
             margin-right: 0.8rem;
+            
         }  
         &:hover + ul {
             margin-top: -1rem;
@@ -672,7 +672,26 @@ main .slideUp {
         }
     }
 
+    .menu-flyer {
+        margin: 0;
+        width: 100%;
+        display: flex;
+
+        > * {
+            margin: 0 2rem;
+            width: calc(50% - 4rem);
+        }
+
+        .menu-flyer-pics img {
+            width: 5.5rem;
+            height: 5.5rem;
+        }
+    }
+
 }
+
+
+
 
 @media screen and (min-width: 1200px) {
 
@@ -682,6 +701,9 @@ main .slideUp {
             padding: 0 22.5em;
         }
     }
+
+
+
 }
 
 
