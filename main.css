@@ -1101,7 +1101,7 @@ main .slideUp {
     position: static;
   }
   .menu-flyer .menu-flyer-pics:hover + ul {
-    margin-top: 3.6rem;
+    margin-top: 4.2rem;
   }
   .menu-flyer .menu-flyer-pics img:nth-child(1) {
     left: 4rem;
