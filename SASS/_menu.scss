@@ -455,19 +455,24 @@ main .slideUp {
         // push each image to right to overlap each by each 
         @for $i from 1 through 5 {
             img:nth-child(#{$i}) {
-                left: calc(10% + $i * 5rem);
+                left: calc(5% + $i * 5rem);
             }
         }
     
         // remove overlapping on hover
-        &:hover img{
-            position: static;
-            margin-right: 0.8rem;            
-        }  
+        &:hover {
 
-        &:hover + ul {
-            margin-top: 0.2rem;
+            margin-left: 3rem;
+            
+            img{
+                position: static;         
+            }  
+
+            + ul {
+                margin-top: 0.2rem;
+            }
         }
+
     }
 
     ul {
@@ -684,22 +689,24 @@ main .slideUp {
         .menu-flyer-pics {
 
             img {
-                width: 5.5rem;
-                height: 5.5rem;
+                width: 5rem;
+                height: 5rem;
             }
 
-            &:hover img{
-                position: static;
-                margin: 0 0.6rem;            
-            }  
+            &:hover {
+            
+                img {
+                    position: static;
+                }  
 
-            &:hover + ul {
-                margin-top: 3.5rem;
+                + ul {
+                    margin-top: 3.6rem;
+                }
             }
 
             @for $i from 1 through 5 {
                 img:nth-child(#{$i}) {
-                    left: calc($i * 5rem);
+                    left: calc($i * 4rem);
                 }
             }
         }
@@ -719,7 +726,26 @@ main .slideUp {
         }
     }
 
+    .menu-flyer {
 
+        .menu-flyer-pics {
+    
+            @for $i from 1 through 5 {
+                img:nth-child(#{$i}) {
+                    left: calc(10% + $i * 4rem);
+                }
+            }
+            
+            &:hover {
+                margin-left: 5.5rem;
+            }
+    
+        }
+
+    }
+    
+    
+    
 
 }
 

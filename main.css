@@ -920,23 +920,25 @@ main .slideUp {
   transition: 0.5s ease;
 }
 .menu-flyer .menu-flyer-pics img:nth-child(1) {
-  left: calc(10% + 5rem);
+  left: calc(5% + 5rem);
 }
 .menu-flyer .menu-flyer-pics img:nth-child(2) {
-  left: calc(10% + 10rem);
+  left: calc(5% + 10rem);
 }
 .menu-flyer .menu-flyer-pics img:nth-child(3) {
-  left: calc(10% + 15rem);
+  left: calc(5% + 15rem);
 }
 .menu-flyer .menu-flyer-pics img:nth-child(4) {
-  left: calc(10% + 20rem);
+  left: calc(5% + 20rem);
 }
 .menu-flyer .menu-flyer-pics img:nth-child(5) {
-  left: calc(10% + 25rem);
+  left: calc(5% + 25rem);
+}
+.menu-flyer .menu-flyer-pics:hover {
+  margin-left: 3rem;
 }
 .menu-flyer .menu-flyer-pics:hover img {
   position: static;
-  margin-right: 0.8rem;
 }
 .menu-flyer .menu-flyer-pics:hover + ul {
   margin-top: 0.2rem;
@@ -1092,34 +1094,51 @@ main .slideUp {
     width: calc(50% - 4rem);
   }
   .menu-flyer .menu-flyer-pics img {
-    width: 5.5rem;
-    height: 5.5rem;
+    width: 5rem;
+    height: 5rem;
   }
   .menu-flyer .menu-flyer-pics:hover img {
     position: static;
-    margin: 0 0.6rem;
   }
   .menu-flyer .menu-flyer-pics:hover + ul {
-    margin-top: 3.5rem;
+    margin-top: 3.6rem;
   }
   .menu-flyer .menu-flyer-pics img:nth-child(1) {
-    left: 5rem;
+    left: 4rem;
   }
   .menu-flyer .menu-flyer-pics img:nth-child(2) {
-    left: 10rem;
+    left: 8rem;
   }
   .menu-flyer .menu-flyer-pics img:nth-child(3) {
-    left: 15rem;
+    left: 12rem;
   }
   .menu-flyer .menu-flyer-pics img:nth-child(4) {
-    left: 20rem;
+    left: 16rem;
   }
   .menu-flyer .menu-flyer-pics img:nth-child(5) {
-    left: 25rem;
+    left: 20rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .menu-video-hero .overlay-menu {
     padding: 0 22.5em;
+  }
+  .menu-flyer .menu-flyer-pics img:nth-child(1) {
+    left: calc(10% + 4rem);
+  }
+  .menu-flyer .menu-flyer-pics img:nth-child(2) {
+    left: calc(10% + 8rem);
+  }
+  .menu-flyer .menu-flyer-pics img:nth-child(3) {
+    left: calc(10% + 12rem);
+  }
+  .menu-flyer .menu-flyer-pics img:nth-child(4) {
+    left: calc(10% + 16rem);
+  }
+  .menu-flyer .menu-flyer-pics img:nth-child(5) {
+    left: calc(10% + 20rem);
+  }
+  .menu-flyer .menu-flyer-pics:hover {
+    margin-left: 5.5rem;
   }
 }/*# sourceMappingURL=main.css.map */
