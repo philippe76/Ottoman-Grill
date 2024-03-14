@@ -860,10 +860,19 @@ main .slideUp {
   margin-top: 2rem;
 }
 
+.fish + .menu-extra {
+  margin-top: 15rem;
+  margin-bottom: 3rem;
+}
+
+.menu-flyer + .menu-extra {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
 .menu-extra {
   clear: both;
   height: 28rem;
-  margin-top: 10rem !important;
   background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgb(4, 4, 4)), url(img/pide-stone-oven.jpg) center;
   background-attachment: fixed;
 }
