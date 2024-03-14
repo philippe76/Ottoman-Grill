@@ -1,10 +1,9 @@
-// datas for brightness change
-let scrollPosition = [];
-let brightness = 55;
+
 
 // **************************************** //
 // ** Change section brightness on scroll ** //
 // **************************************** //
+let brightness = 55;
 
 // if (window.scrollY > 1940)  {
 
@@ -28,17 +27,38 @@ let brightness = 55;
 
 
 
-// **************************************** //
-// ***** Add header border on scroll ****** //
-// **************************************** //
+
+
+let scrollPosition = [];
+
 
 window.onscroll = function() {
 
+    // **************************************** //
+    // ***** Add header border on scroll ****** //
+    // **************************************** //
+    
     if (window.scrollY > 0){  
         document.querySelector('header').classList.add("header-border");
     }
     else {
         document.querySelector('header').classList.remove("header-border");
+    }
+
+    // **************************************** //
+    // ** Get Header back when scrolling up ** //
+    // **************************************** //
+
+    
+    scrollPosition.splice(1); // delete too old position
+    scrollPosition.unshift(Math.round(window.scrollY)); // Add new position
+
+    if (scrollPosition[0] < scrollPosition[1]){
+        // document.getElementById('desserts').style.filter = `brightness(${brightness+=3.5}%)`
+        document.querySelector('header').classList.add('headerBack')
+    }
+    else {
+        document.querySelector('header').classList.remove('headerBack')
     }
 }
 
