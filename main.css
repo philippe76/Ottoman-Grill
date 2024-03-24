@@ -882,15 +882,6 @@ main .slideUp {
   background: linear-gradient(to top, rgba(26, 17, 3, 0.6), rgb(4, 4, 4)), url(img/pide-stone-oven.jpg) center;
   background-attachment: fixed;
 }
-.menu-extra .menu-title {
-  padding-top: 0;
-  margin-bottom: 0.5rem;
-}
-.menu-extra .menu-title h2 {
-  color: #dca26b;
-  font-size: 1.8rem;
-  margin: 0;
-}
 .menu-extra .menu-card {
   width: 100%;
   height: 100%;
@@ -902,6 +893,15 @@ main .slideUp {
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   font-weight: 500;
   letter-spacing: 0.5px;
+}
+.menu-extra .menu-card .menu-title {
+  padding-top: 0;
+  margin-bottom: 0.5rem;
+}
+.menu-extra .menu-card .menu-title h2 {
+  color: #dca26b;
+  font-size: 1.8rem;
+  margin: 0;
 }
 .menu-extra .menu-card li {
   width: 100%;

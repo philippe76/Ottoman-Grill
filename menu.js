@@ -3,7 +3,7 @@
 // **************************************** //
 // ** Change section brightness on scroll ** //
 // **************************************** //
-let brightness = 55;
+// let brightness = 55;
 
 // if (window.scrollY > 1940)  {
 
@@ -28,9 +28,12 @@ let brightness = 55;
 
 
 
-
+// to use for knowing if scrolling up or down
 let scrollPosition = [];
 
+// to use to change brightness of background images
+// let brightness = getComputedStyle(document.getElementById('desserts')).filter.brightness;
+// console.log(brightness);
 
 window.onscroll = function() {
 
@@ -53,10 +56,11 @@ window.onscroll = function() {
     scrollPosition.splice(1); // delete too old position
     scrollPosition.unshift(Math.round(window.scrollY)); // Add new position
 
+    // if scrolling up
     if (scrollPosition[0] < scrollPosition[1]){
-        // document.getElementById('desserts').style.filter = `brightness(${brightness+=3.5}%)`
         document.querySelector('header').classList.add('headerBack')
     }
+    // if scrolling down
     else {
         document.querySelector('header').classList.remove('headerBack')
     }
@@ -69,17 +73,33 @@ window.onscroll = function() {
 
 // Create observer
 const observer = new IntersectionObserver(entries => {
-
+    
     entries.forEach(entry => {
-
+                
         // when scrolling to observed elements
         if (entry.isIntersecting) {                    
-  
-            // *** Menu Animation *** //
-            entry.target.classList.add('slideUp');
             
+            // change brightness of menu-cards background images
+            if (entry.target.id === 'skewer' || entry.target.id === 'desserts') {
+                
+                // if scrolling down
+                // if(scrollPosition[0] > scrollPosition[1]){
+                //     document.getElementById('desserts').style.filter = `brightness(${brightness+=3.5}%)`
+                // } 
+                // //  if scrolling up
+                // else{
+                //     document.getElementById('desserts').style.filter = `brightness(${brightness-=3.5}%)`
+                // }
+                                
+                
+            }
+            else {
+                // *** Menu Animation *** //
+                entry.target.classList.add('slideUp');
+            }
         }
     })
+
 });
 
 // Choose elements to observe
@@ -87,12 +107,13 @@ const observer = new IntersectionObserver(entries => {
 const menuDetails = document.querySelectorAll('main ul:not(.menu-card ul)');
 
 menuDetails.forEach(item => {
-    console.log(item);
     observer.observe(item);
 })
 
 observer.observe(document.querySelector('.fish-pics'));
 observer.observe(document.querySelector('.fish-pics + .with-price'));
+observer.observe(document.getElementById('skewer'));
+observer.observe(document.getElementById('desserts'));
 
 
 

@@ -412,16 +412,6 @@ main .slideUp {
     background: $gradient-melted-overlay, url(img/pide-stone-oven.jpg) center;
     background-attachment: fixed;
 
-    .menu-title {
-        padding-top: 0;
-        margin-bottom: 0.5rem;
-
-        h2 {
-            color: $secondary-color;
-            font-size: 1.8rem;
-            margin: 0;
-        }
-    }
     .menu-card {
         width: 100%;
         height: 100%;
@@ -433,6 +423,17 @@ main .slideUp {
         font-size: clamp(0.9rem, 2.5vw, 1.1rem);
         font-weight: 500;
         letter-spacing: 0.5px;
+
+        .menu-title {
+            padding-top: 0;
+            margin-bottom: 0.5rem;
+    
+            h2 {
+                color: $secondary-color;
+                font-size: 1.8rem;
+                margin: 0;
+            }
+        }
 
         li {
             width: 100%;
