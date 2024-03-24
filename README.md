@@ -24,4 +24,9 @@ _* For information, this work is the result of a personal initiative and was not
 
 <br />
 
+![WebSite ScreenShot](img/OttomanGrillScreenShot.png)
+
+
+<br />
+
 You can take a look at the original website here : [https://ottomangrill.fr/](https://ottomangrill.fr/) 
